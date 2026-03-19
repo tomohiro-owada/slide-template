@@ -10,8 +10,9 @@
     "chart": "default"
   },
   "branding": {
-    "confidential": true,
-    "logoPosition": "bottom-right"
+    "logo": "/assets/logo.svg",
+    "logoPosition": "bottom-right",
+    "confidential": true
   },
   "fonts": {
     "en": { "heading": "Cormorant Garamond", "body": "Poppins" },
