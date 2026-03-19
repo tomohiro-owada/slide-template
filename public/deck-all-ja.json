@@ -11,7 +11,7 @@
   },
   "branding": {
     "logo": "/assets/logo.svg",
-    "logoPosition": "bottom-right",
+    "logoPosition": "top-right",
     "confidential": true
   },
   "fonts": {

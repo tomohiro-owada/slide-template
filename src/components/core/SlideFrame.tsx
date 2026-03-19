@@ -61,45 +61,44 @@ export function SlideFrame({
         <SlideDecoration config={decoration} />
       )}
 
-      {/* ロゴ */}
-      {branding?.logo && (
+      {/* ブランディング（ロゴ＋社外秘を同じ位置にまとめて並べる） */}
+      {(branding?.logo || branding?.confidential) && (
         <div style={{
           position: 'absolute',
           zIndex: 20,
-          ...(logoPositionStyle(branding.logoPosition)),
+          ...brandingPositionStyle(branding.logoPosition),
+          display: 'flex',
+          alignItems: 'center',
+          gap: tokens.spacing.sm,
         }}>
-          <img
-            src={branding.logo}
-            alt="Logo"
-            style={{ height: 40, width: 'auto', opacity: 0.8 }}
-          />
-        </div>
-      )}
-
-      {/* 社外秘 */}
-      {branding?.confidential && (
-        <div style={{
-          position: 'absolute',
-          zIndex: 20,
-          top: tokens.spacing.sm,
-          right: tokens.spacing.slidePadding,
-          padding: `${tokens.spacing.xs}px ${tokens.spacing.md}px`,
-          backgroundColor: 'rgba(220, 38, 38, 0.9)',
-          color: '#fff',
-          fontSize: 12,
-          fontWeight: 600,
-          borderRadius: tokens.radius.sm,
-          letterSpacing: '0.05em',
-          fontFamily: tokens.font.body,
-        }}>
-          {branding.confidentialText}
+          {branding.confidential && (
+            <div style={{
+              padding: `${tokens.spacing.xs}px ${tokens.spacing.md}px`,
+              backgroundColor: 'rgba(220, 38, 38, 0.9)',
+              color: '#fff',
+              fontSize: 12,
+              fontWeight: 600,
+              borderRadius: tokens.radius.sm,
+              letterSpacing: '0.05em',
+              fontFamily: tokens.font.body,
+            }}>
+              {branding.confidentialText}
+            </div>
+          )}
+          {branding.logo && (
+            <img
+              src={branding.logo}
+              alt="Logo"
+              style={{ height: 40, width: 'auto', opacity: 0.8 }}
+            />
+          )}
         </div>
       )}
     </div>
   );
 }
 
-function logoPositionStyle(position: string): CSSProperties {
+function brandingPositionStyle(position: string): CSSProperties {
   const pad = tokens.spacing.md;
   switch (position) {
     case 'top-left':     return { top: pad, left: pad };
