@@ -128,10 +128,6 @@ export const layoutRegistry: Record<number, LayoutEntry> = {
   6: {
     id: 'two-col-comparison', name: '2カラム比較', category: 'columns',
     component: TwoColumnComparisonSlide, schema: schemas.twoColComparisonSchema, decoration: true,
-    slotOverride: {
-      'top-left': false, 'bottom-left': false, 'bottom-right': false, 'left': false, 'right': false,
-      'top-right': { enabled: true, element: 'curve', size: 'lg' },
-    },
     useCase: {
       primary: '2つの概念・状態・選択肢を並べて比較するとき',
       scenarios: ['Before/After', 'Pros/Cons', '旧方式vs新方式', '2案の比較'],

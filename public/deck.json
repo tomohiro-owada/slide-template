@@ -49,7 +49,7 @@
     },
     {
       "layout": 6,
-      "decoration": "lines-double",
+      "decoration": { "corners": ["top-right"] },
       "content": {
         "title": "Q2 vs Q3",
         "leftLabel": "Q2",
