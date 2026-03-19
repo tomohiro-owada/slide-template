@@ -13,7 +13,9 @@ export interface TableOfContentsContent {
 export function TableOfContentsSlide({ content }: SlideProps<TableOfContentsContent>) {
   const title = content.title ?? 'Table of contents';
   // 列数はアイテム数に応じて自動判定（3列が基本）
-  const columns = content.items.length <= 4 ? 2 : 3;
+  // 3個以下→その数だけ横並び、4個→2列、5〜6個→3列、7〜8個→4列
+  const len = content.items.length;
+  const columns = len <= 3 ? len : len <= 4 ? 2 : len <= 6 ? 3 : 4;
 
   return (
     <Flex direction="col" align="center" justify="center" style={{ height: '100%' }}>

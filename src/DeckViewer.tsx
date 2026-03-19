@@ -24,7 +24,9 @@ export function DeckViewer({ deckUrl }: DeckViewerProps) {
   const [activeSlide, setActiveSlide] = useState(0);
 
   useEffect(() => {
-    loadDeck(deckUrl)
+    // Vite dev server では public/ 内のファイルはルート直下でアクセス可能
+    const url = deckUrl.startsWith('http') ? deckUrl : `/${deckUrl}`;
+    loadDeck(url)
       .then(setDeck)
       .catch((e) => setError(e.message));
   }, [deckUrl]);

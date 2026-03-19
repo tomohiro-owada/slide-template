@@ -23,10 +23,15 @@ export interface DeckJson {
   slides: DeckSlide[];
 }
 
+// decoration は プリセット名(string) or 四隅を直接指定(object)
+export type SlideDecoration =
+  | string                                           // プリセット名: "curves-diagonal"
+  | { corners: Array<'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'> }; // 四隅を直接指定
+
 export interface DeckSlide {
   layout: number;
   content: Record<string, unknown>;
-  decoration?: string;   // スライド個別のプリセット上書き
+  decoration?: SlideDecoration;  // スライド個別の飾り指定
   exposure?: number;
   chart?: {
     intent: string;
@@ -77,14 +82,28 @@ export function resolveDeck(deck: DeckJson): ResolvedDeck {
     // デコレーション: レイアウトが decoration:false なら undefined
     let decoration: DecorationConfig | undefined = undefined;
     if (layout.decoration) {
+      const exp = slide.exposure ?? deck.defaults.exposure;
+
       if (slide.decoration) {
-        // スライド個別上書き
-        const preset = decorationPresets[slide.decoration];
-        decoration = preset
-          ? { ...preset, exposure: slide.exposure ?? deck.defaults.exposure }
-          : defaultDecoration;
+        if (typeof slide.decoration === 'string') {
+          // プリセット名指定
+          const preset = decorationPresets[slide.decoration];
+          decoration = preset ? { ...preset, exposure: exp } : defaultDecoration;
+        } else if ('corners' in slide.decoration) {
+          // 四隅を直接指定: { corners: ["top-left", "bottom-right"] }
+          const slots: DecorationConfig['slots'] = {};
+          for (const corner of slide.decoration.corners) {
+            slots[corner] = { enabled: true, element: 'curve' };
+          }
+          decoration = {
+            slots,
+            topLine: { enabled: false, variant: 'single' },
+            bottomLine: { enabled: false, variant: 'single' },
+            exposure: exp,
+          };
+        }
       } else {
-        decoration = defaultDecoration;
+        decoration = defaultDecoration ? { ...defaultDecoration, exposure: exp } : undefined;
       }
 
       // slotOverride 適用

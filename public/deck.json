@@ -16,6 +16,7 @@
   "slides": [
     {
       "layout": 1,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
       "content": {
         "title": "Q3 Revenue Report",
         "subtitle": "2026年度 第3四半期 業績報告",
@@ -25,6 +26,7 @@
     },
     {
       "layout": 4,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
       "content": {
         "items": [
           { "number": "01", "label": "業績概要", "description": "売上・利益のハイライト" },
@@ -35,6 +37,7 @@
     },
     {
       "layout": 28,
+      "decoration": "lines-double",
       "content": {
         "title": "Key Metrics",
         "stats": [
@@ -46,6 +49,7 @@
     },
     {
       "layout": 6,
+      "decoration": "lines-double",
       "content": {
         "title": "Q2 vs Q3",
         "leftLabel": "Q2",
@@ -64,11 +68,12 @@
     },
     {
       "layout": 7,
+      "decoration": { "corners": ["bottom-right"] },
       "content": {
         "title": "APAC Expansion",
         "body": "アジア太平洋地域への進出を開始。シンガポールにリージョナルオフィスを開設し、現地チーム5名を採用。初年度の目標は$500Kの売上達成。",
         "image": {
-          "description": "アジア太平洋地域の地図にオフィス所在地をマーク。シンガポールを中心にハイライト。",
+          "description": "アジア太平洋地域の地図にオフィス所在地をマーク",
           "style": "illustration",
           "mood": "professional, modern"
         }
@@ -76,6 +81,7 @@
     },
     {
       "layout": 29,
+      "decoration": { "corners": ["top-left", "top-right", "bottom-left", "bottom-right"] },
       "content": {
         "message": "23% Growth",
         "subtext": "過去最高の四半期成長率を達成"
@@ -83,6 +89,7 @@
     },
     {
       "layout": 5,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
       "content": {
         "title": "Thank You",
         "subtitle": "ご質問があればお気軽にどうぞ",
