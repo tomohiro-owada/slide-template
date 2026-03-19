@@ -87,7 +87,7 @@ function App() {
   const [activeSlide, setActiveSlide] = useState(1);
   const [exposure, setExposure] = useState(1.0);
   const [filterCategory, setFilterCategory] = useState<TemplateCategory | 'all'>('all');
-  const [selectedPreset, setSelectedPreset] = useState<string>('title');
+  const [selectedPreset, setSelectedPreset] = useState<string>('curves-diagonal');
 
   const layout = layoutRegistry[activeSlide];
   const content = sampleContent[activeSlide];

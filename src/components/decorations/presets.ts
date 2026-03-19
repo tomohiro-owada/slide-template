@@ -1,77 +1,70 @@
 import type { DecorationConfig } from '../../types/slide';
 
-// 画像のスライドから読み取ったプリセット
 export const decorationPresets: Record<string, DecorationConfig> = {
-  // タイトルスライド: 左上＋右下にカーブ大、上下ダブルライン
-  title: {
-    slots: {
-      'top-left':     { enabled: true, element: 'curve', size: 'lg' },
-      'bottom-right': { enabled: true, element: 'curve', size: 'lg' },
-    },
-    topLine:    { enabled: true, variant: 'double' },
-    bottomLine: { enabled: true, variant: 'double' },
-    exposure: 1.0,
-  },
+  // === カーブ系（ラインなし）===
 
-  // コンテンツA: 右上カーブ小、上ダブルライン
-  'content-a': {
+  // 四隅全部
+  'curves-all': {
     slots: {
-      'top-right': { enabled: true, element: 'curve', size: 'sm' },
+      'top-left':     { enabled: true, element: 'curve' },
+      'top-right':    { enabled: true, element: 'curve' },
+      'bottom-left':  { enabled: true, element: 'curve' },
+      'bottom-right': { enabled: true, element: 'curve' },
     },
-    topLine:    { enabled: true, variant: 'double' },
+    topLine:    { enabled: false, variant: 'single' },
     bottomLine: { enabled: false, variant: 'single' },
     exposure: 1.0,
   },
 
-  // コンテンツB: 下左右にカーブ小、上下ライン
-  'content-b': {
+  // 左上＋右下（対角）
+  'curves-diagonal': {
     slots: {
-      'bottom-left':  { enabled: true, element: 'curve', size: 'sm' },
-      'bottom-right': { enabled: true, element: 'curve', size: 'sm' },
+      'top-left':     { enabled: true, element: 'curve' },
+      'bottom-right': { enabled: true, element: 'curve' },
     },
-    topLine:    { enabled: true, variant: 'double' },
-    bottomLine: { enabled: true, variant: 'single' },
+    topLine:    { enabled: false, variant: 'single' },
+    bottomLine: { enabled: false, variant: 'single' },
     exposure: 1.0,
   },
 
-  // フレーム: 上下ダブルラインのみ（カーブなし）
-  frame: {
+  // 右上のみ
+  'curves-top-right': {
+    slots: {
+      'top-right': { enabled: true, element: 'curve' },
+    },
+    topLine:    { enabled: false, variant: 'single' },
+    bottomLine: { enabled: false, variant: 'single' },
+    exposure: 1.0,
+  },
+
+  // === ライン系（カーブなし）===
+
+  // 上下ダブルライン
+  'lines-double': {
     slots: {},
     topLine:    { enabled: true, variant: 'double' },
     bottomLine: { enabled: true, variant: 'double' },
     exposure: 1.0,
   },
 
-  // ミニマル: 上ラインだけ
-  minimal: {
+  // 上ダブル＋下シングル
+  'lines-mixed': {
+    slots: {},
+    topLine:    { enabled: true, variant: 'double' },
+    bottomLine: { enabled: true, variant: 'single' },
+    exposure: 1.0,
+  },
+
+  // 上ラインのみ
+  'lines-top': {
     slots: {},
     topLine:    { enabled: true, variant: 'single' },
     bottomLine: { enabled: false, variant: 'single' },
     exposure: 1.0,
   },
 
-  // アクセント左: 左上カーブ中＋上下ライン
-  'accent-left': {
-    slots: {
-      'top-left': { enabled: true, element: 'curve', size: 'md' },
-    },
-    topLine:    { enabled: true, variant: 'double' },
-    bottomLine: { enabled: true, variant: 'single' },
-    exposure: 1.0,
-  },
-
-  // アクセント右: 右下カーブ中＋上下ライン
-  'accent-right': {
-    slots: {
-      'bottom-right': { enabled: true, element: 'curve', size: 'md' },
-    },
-    topLine:    { enabled: true, variant: 'double' },
-    bottomLine: { enabled: true, variant: 'single' },
-    exposure: 1.0,
-  },
-
-  // 飾りなし
-  none: {
+  // === なし ===
+  'none': {
     slots: {},
     topLine:    { enabled: false, variant: 'single' },
     bottomLine: { enabled: false, variant: 'single' },

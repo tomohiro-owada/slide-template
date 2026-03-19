@@ -1,4 +1,4 @@
-import { Flex, Text, Spacer } from '../../primitives';
+import { Flex, Grid, Text, Spacer } from '../../primitives';
 import { tokens } from '../../../config/tokens';
 import type { SlideProps } from '../../../types/slide';
 
@@ -9,15 +9,21 @@ export interface IconListContent {
 
 export function IconListSlide({ content }: SlideProps<IconListContent>) {
   const iconSize = 48;
+  const columns = content.items.length > 4 ? 2 : content.items.length > 2 ? 2 : 1;
 
   return (
-    <Flex direction="col" style={{ height: '100%', padding: tokens.spacing.slidePadding }}>
-      <Text variant="h2">{content.title}</Text>
-      <Spacer size="xl" />
-      <Flex direction="col" gap="lg" style={{ flex: 1 }}>
+    <Flex direction="col" align="center" justify="center" style={{ height: '100%' }}>
+      <Text variant="h2" align="center">{content.title}</Text>
+      <Spacer size="xxl" />
+      <Grid columns={columns} gap="xl" rowGap="lg" style={{ width: '100%', maxWidth: 1400 }}>
         {content.items.map((item, i) => (
-          <Flex key={i} direction="row" gap="lg" align="flex-start">
-            {/* Icon circle with first letter */}
+          <Flex key={i} direction="row" gap="lg" align="center"
+            style={{
+              padding: `${tokens.spacing.md}px ${tokens.spacing.lg}px`,
+              backgroundColor: tokens.layout.panel.background,
+              borderRadius: tokens.radius.md,
+            }}
+          >
             <div style={{
               width: iconSize,
               height: iconSize,
@@ -28,27 +34,22 @@ export function IconListSlide({ content }: SlideProps<IconListContent>) {
               justifyContent: 'center',
               flexShrink: 0,
             }}>
-              <Text
-                variant="h4"
-                color={tokens.layout.text.inverse}
-                align="center"
-              >
+              <Text variant="h4" color={tokens.layout.text.inverse} align="center">
                 {item.icon.charAt(0).toUpperCase()}
               </Text>
             </div>
-            {/* Title and body */}
             <Flex direction="col">
-              <Text variant="h4" color={tokens.layout.text.heading}>{item.title}</Text>
+              <Text variant="h4">{item.title}</Text>
               {item.body && (
                 <>
                   <Spacer size="xs" />
-                  <Text variant="body" color={tokens.layout.text.body}>{item.body}</Text>
+                  <Text variant="body">{item.body}</Text>
                 </>
               )}
             </Flex>
           </Flex>
         ))}
-      </Flex>
+      </Grid>
     </Flex>
   );
 }
