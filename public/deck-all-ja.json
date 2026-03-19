@@ -1,0 +1,496 @@
+{
+  "meta": {
+    "title": "全44レイアウト日本語デモ",
+    "author": "towada",
+    "date": "2026-03-20"
+  },
+  "colors": {
+    "palette": "default",
+    "layout": "warm-minimal",
+    "chart": "default"
+  },
+  "fonts": {
+    "en": { "heading": "Cormorant Garamond", "body": "Poppins" },
+    "ja": { "heading": "Shippori Mincho", "body": "Zen Kaku Gothic New" }
+  },
+  "defaults": {
+    "decoration": "curves-diagonal",
+    "exposure": 0.8
+  },
+  "slides": [
+    {
+      "layout": 1,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "第3四半期\n業績報告",
+        "subtitle": "2026年度 事業成長と今後の展望",
+        "presenter": "towada",
+        "date": "2026年3月20日"
+      }
+    },
+    {
+      "layout": 2,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "sectionNumber": "01",
+        "title": "業績ハイライト",
+        "subtitle": "売上・利益・成長率の概要"
+      }
+    },
+    {
+      "layout": 3,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "第2四半期の振り返り",
+        "keyPoints": [
+          { "text": "売上高が前年同期比23%増の4.2億円を達成" },
+          { "text": "新規法人顧客3社を獲得、累計45社に" },
+          { "text": "APAC市場への本格進出を開始" }
+        ]
+      }
+    },
+    {
+      "layout": 4,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "items": [
+          { "number": "01", "label": "業績概要", "description": "売上・利益のハイライト" },
+          { "number": "02", "label": "事業別分析", "description": "セグメント別の詳細数値" },
+          { "number": "03", "label": "顧客動向", "description": "新規獲得と解約率の推移" },
+          { "number": "04", "label": "海外展開", "description": "APAC市場への進出状況" },
+          { "number": "05", "label": "組織体制", "description": "採用と組織の変化" },
+          { "number": "06", "label": "今後の展望", "description": "次四半期の計画と目標" }
+        ]
+      }
+    },
+    {
+      "layout": 5,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "ご清聴ありがとう\nございました",
+        "subtitle": "ご質問があればお気軽にどうぞ",
+        "contactName": "towada",
+        "contactEmail": "towada@example.com"
+      }
+    },
+    {
+      "layout": 6,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "四半期比較",
+        "leftLabel": "Q2",
+        "leftPoints": [{ "text": "売上 3.4億円" }, { "text": "顧客数 42社" }, { "text": "解約率 5.2%" }],
+        "rightLabel": "Q3",
+        "rightPoints": [{ "text": "売上 4.2億円" }, { "text": "顧客数 45社" }, { "text": "解約率 3.8%" }]
+      }
+    },
+    {
+      "layout": 7,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "開発アプローチ",
+        "body": "最新技術と人間中心設計を組み合わせ、本当に価値のあるソリューションを提供。品質を担保しながらスピードを両立します。",
+        "image": { "description": "チームがホワイトボードで議論する様子", "style": "photo" }
+      }
+    },
+    {
+      "layout": 8,
+      "decoration": { "corners": ["bottom-left"] },
+      "content": {
+        "title": "新ダッシュボード",
+        "body": "リアルタイム分析とカスタマイズ可能なビューで業務の全体像を把握。直感的な操作で誰でもすぐ使えます。",
+        "image": { "description": "プロダクトのダッシュボード画面", "style": "photo" }
+      }
+    },
+    {
+      "layout": 9,
+      "decoration": { "corners": ["top-left", "top-right"] },
+      "content": {
+        "title": "サービス一覧",
+        "columns": [
+          { "image": { "description": "コンサルアイコン" }, "title": "コンサルティング", "body": "戦略立案から実行支援まで" },
+          { "image": { "description": "開発アイコン" }, "title": "プロダクト開発", "body": "スケーラブルな設計と実装" },
+          { "image": { "description": "サポートアイコン" }, "title": "運用サポート", "body": "24時間365日の安心体制" }
+        ]
+      }
+    },
+    {
+      "layout": 10,
+      "decoration": "lines-double",
+      "content": {
+        "title": "料金プラン",
+        "columns": [
+          { "title": "スターター", "body": "月額2,900円\n5ユーザーまで\n基本分析機能" },
+          { "title": "プロフェッショナル", "body": "月額9,900円\n50ユーザーまで\n高度な分析機能" },
+          { "title": "エンタープライズ", "body": "個別見積り\n無制限ユーザー\n全機能利用可能" }
+        ],
+        "accentIndex": 1
+      }
+    },
+    {
+      "layout": 11,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "行動指針",
+        "columns": [
+          { "icon": "💡", "title": "革新", "body": "常に新しい挑戦を" },
+          { "icon": "🤝", "title": "信頼", "body": "誠実な関係構築" },
+          { "icon": "🎯", "title": "集中", "body": "成果にこだわる" },
+          { "icon": "🌍", "title": "共創", "body": "多様性を力に" }
+        ]
+      }
+    },
+    {
+      "layout": 12,
+      "decoration": "lines-double",
+      "content": {
+        "title": "技術習熟度",
+        "columns": [
+          { "title": "入門", "body": "基礎学習中", "level": 1 },
+          { "title": "初級", "body": "基本操作可能", "level": 2 },
+          { "title": "中級", "body": "実務レベル", "level": 3 },
+          { "title": "上級", "body": "設計・指導可", "level": 4 },
+          { "title": "エキスパート", "body": "第一人者", "level": 5 }
+        ]
+      }
+    },
+    {
+      "layout": 13,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "事業概況",
+        "items": [
+          { "image": { "description": "売上グラフ" }, "title": "売上高", "body": "前年比23%増" },
+          { "image": { "description": "ユーザー推移" }, "title": "利用者数", "body": "100万人突破" },
+          { "image": { "description": "地域マップ" }, "title": "展開地域", "body": "12カ国で展開" },
+          { "image": { "description": "パートナーロゴ" }, "title": "提携企業", "body": "50社以上と連携" }
+        ]
+      }
+    },
+    {
+      "layout": 14,
+      "decoration": { "corners": ["bottom-left", "bottom-right"] },
+      "content": {
+        "title": "実績紹介",
+        "items": [
+          { "image": { "description": "案件A" }, "title": "製造業DX", "body": "基幹システム刷新" },
+          { "image": { "description": "案件B" }, "title": "金融API", "body": "決済基盤構築" },
+          { "image": { "description": "案件C" }, "title": "小売分析", "body": "需要予測AI" },
+          { "image": { "description": "案件D" }, "title": "物流最適化", "body": "配送ルート自動化" },
+          { "image": { "description": "案件E" }, "title": "医療支援", "body": "診断支援システム" },
+          { "image": { "description": "案件F" }, "title": "教育プラットフォーム", "body": "オンライン学習" }
+        ]
+      }
+    },
+    {
+      "layout": 15,
+      "decoration": { "corners": ["top-left", "top-right"] },
+      "content": {
+        "title": "導入プロセス",
+        "steps": [
+          { "title": "ヒアリング", "body": "現状の課題と目標を丁寧にお伺いし、最適なアプローチを設計します。" },
+          { "title": "設計・開発", "body": "お客様の業務フローに合わせたソリューションを構築します。" },
+          { "title": "導入・定着", "body": "運用開始後も継続的なサポートと改善提案を行います。" }
+        ]
+      }
+    },
+    {
+      "layout": 16,
+      "decoration": "lines-double",
+      "content": {
+        "title": "ご利用開始の流れ",
+        "steps": [
+          { "number": "01", "title": "お申込み", "body": "アカウント作成" },
+          { "number": "02", "title": "初期設定", "body": "環境構築サポート" },
+          { "number": "03", "title": "データ連携", "body": "既存システムと接続" },
+          { "number": "04", "title": "運用開始", "body": "即日利用可能" }
+        ]
+      }
+    },
+    {
+      "layout": 17,
+      "decoration": "lines-mixed",
+      "content": {
+        "title": "開発ロードマップ",
+        "events": [
+          { "date": "Q1", "title": "市場調査", "description": "ニーズ分析と仮説検証" },
+          { "date": "Q2", "title": "プロトタイプ", "description": "MVP開発と社内テスト" },
+          { "date": "Q3", "title": "ベータ版", "description": "限定ユーザーで検証" },
+          { "date": "Q4", "title": "正式リリース", "description": "一般公開と拡販開始" }
+        ]
+      }
+    },
+    {
+      "layout": 18,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "選ばれる理由",
+        "items": [
+          { "icon": "check", "title": "10年以上の実績", "body": "累計200社以上の導入支援" },
+          { "icon": "star", "title": "専門家集団", "body": "各領域のスペシャリストが在籍" },
+          { "icon": "shield", "title": "万全のセキュリティ", "body": "SOC 2 Type II認証取得済み" },
+          { "icon": "clock", "title": "迅速なサポート", "body": "平均応答時間15分以内" }
+        ]
+      }
+    },
+    {
+      "layout": 19,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "導入事例",
+        "image": { "description": "大手製造業の工場内写真", "style": "photo" },
+        "body": "大手製造業A社様では、当社ソリューション導入により生産効率が40%向上。年間コスト削減額は2億円を超え、業界標準のベストプラクティスとして注目されています。",
+        "footer": "2026年3月 公開"
+      }
+    },
+    {
+      "layout": 20,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "重要なお知らせ",
+        "body": "システムメンテナンスのため、3月25日〜27日の間サービスを一時停止いたします。ご不便をおかけしますが、事前にデータのバックアップをお願いいたします。",
+        "highlight": "対応期限：3月24日までにバックアップ完了"
+      }
+    },
+    {
+      "layout": 21,
+      "decoration": "none",
+      "content": {
+        "title": "私たちのビジョン",
+        "body": "テクノロジーで人の可能性を広げる世界を創る",
+        "backgroundImage": { "description": "未来的なテクノロジーの抽象背景", "style": "abstract" }
+      }
+    },
+    {
+      "layout": 22,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "ミッション",
+        "body": "持続可能な成長と社会的インパクトを両立するインテリジェントなソリューションで、あらゆる産業のお客様を支援します。"
+      }
+    },
+    {
+      "layout": 23,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "事業責任者",
+        "image": { "description": "プロフィール写真", "style": "photo" },
+        "body": "田中太郎。デジタル変革の分野で15年の経験を持ち、12カ国で50以上のプロジェクトを率いてきました。",
+        "tags": [{ "text": "リーダーシップ" }, { "text": "戦略立案" }, { "text": "イノベーション" }]
+      }
+    },
+    {
+      "layout": 24,
+      "decoration": "none",
+      "content": {
+        "title": "すべてを再定義する",
+        "subtitle": "エンタープライズソフトウェアの未来",
+        "backgroundImage": { "description": "壮大な風景写真", "style": "photo" }
+      }
+    },
+    {
+      "layout": 25,
+      "decoration": "none",
+      "content": {
+        "title": "東京オフィス",
+        "body": "東京都心に位置する本社オフィスは、アジア太平洋地域のイノベーション拠点。協創と創造性を育む空間です。",
+        "backgroundImage": { "description": "モダンなオフィス空間", "style": "photo" }
+      }
+    },
+    {
+      "layout": 26,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "day": "25",
+        "month": "3月",
+        "title": "新製品発表会",
+        "body": "今年最大のリリースをお届けします。ライブ配信もご用意しております。"
+      }
+    },
+    {
+      "layout": 27,
+      "decoration": "none",
+      "content": {
+        "title": "グローバル拠点",
+        "body": "世界12カ国に展開",
+        "images": [
+          { "image": { "description": "東京オフィス" } },
+          { "image": { "description": "シンガポールオフィス" } },
+          { "image": { "description": "ロンドンオフィス" } }
+        ]
+      }
+    },
+    {
+      "layout": 28,
+      "decoration": "lines-double",
+      "content": {
+        "title": "主要指標",
+        "stats": [
+          { "value": "4.2億", "label": "売上高", "trend": "up" },
+          { "value": "23%", "label": "成長率", "trend": "up" },
+          { "value": "150+", "label": "導入企業数", "trend": "up" }
+        ],
+        "footnote": "前四半期比"
+      }
+    },
+    {
+      "layout": 29,
+      "decoration": { "corners": ["top-left", "top-right", "bottom-left", "bottom-right"] },
+      "content": {
+        "message": "23%成長",
+        "subtext": "創業以来最高の四半期成長率を達成しました"
+      }
+    },
+    {
+      "layout": 30,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "Q&A",
+        "subtitle": "ご質問をお待ちしております"
+      }
+    },
+    {
+      "layout": 31,
+      "decoration": { "corners": ["bottom-left"] },
+      "content": {
+        "title": "アプリダウンロード",
+        "url": "https://example.com/app",
+        "description": "QRコードを読み取って、すぐにご利用いただけます。"
+      }
+    },
+    {
+      "layout": 32,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "question": "もしコストを半分にできたら？",
+        "subtext": "私たちのプラットフォームがそれを実現します。"
+      }
+    },
+    {
+      "layout": 33,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "設計哲学",
+        "body": "優れたデザインとは見た目ではなく、どう機能するかです。私たちはすべてのピクセルとインタラクションにこだわり続けます。"
+      }
+    },
+    {
+      "layout": 34,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "デザインプロセス",
+        "body": "反復的なデザインプロセスで、複数回のフィードバックを経て細部まで磨き上げます。",
+        "images": [
+          { "image": { "description": "ワイヤーフレーム" }, "caption": "設計" },
+          { "image": { "description": "モックアップ" }, "caption": "検証" },
+          { "image": { "description": "完成デザイン" }, "caption": "完成" }
+        ]
+      }
+    },
+    {
+      "layout": 35,
+      "decoration": "lines-double",
+      "content": {
+        "title": "市場シェア",
+        "ratios": [
+          { "value": "72%", "label": "自社プロダクト", "total": 100 },
+          { "value": "18%", "label": "競合A社", "total": 100 },
+          { "value": "10%", "label": "その他", "total": 100 }
+        ]
+      }
+    },
+    {
+      "layout": 36,
+      "decoration": "lines-mixed",
+      "content": {
+        "title": "成長の軌跡",
+        "body": "この1年で3つの新市場に参入しながら、品質への取り組みを維持。顧客満足度は過去最高の94%を記録しました。",
+        "stats": [{ "value": "340%", "label": "ユーザー増加" }, { "value": "12億", "label": "年間売上" }]
+      }
+    },
+    {
+      "layout": 37,
+      "decoration": "none",
+      "content": {
+        "title": "エグゼクティブサマリー",
+        "keyPoints": [
+          { "text": "売上目標を15%上回って達成" },
+          { "text": "顧客満足度が過去最高の94%に" },
+          { "text": "3つの新市場への参入に成功" }
+        ],
+        "backgroundImage": { "description": "抽象的なグラデーション背景", "style": "abstract" }
+      }
+    },
+    {
+      "layout": 38,
+      "decoration": "lines-double",
+      "content": {
+        "title": "今期の成果",
+        "items": [
+          { "text": "v2.0を50以上の新機能とともにリリース" },
+          { "text": "チームを120名体制に拡大" },
+          { "text": "Best SaaS Product 2026を受賞" }
+        ],
+        "stats": [{ "value": "99.9%", "label": "稼働率" }, { "value": "4.8", "label": "アプリ評価" }]
+      }
+    },
+    {
+      "layout": 39,
+      "decoration": "lines-double",
+      "content": {
+        "title": "セグメント分析",
+        "categories": [
+          { "label": "エンタープライズ", "stat": "2.8億", "points": [{ "text": "大型契約中心" }, { "text": "長期的な関係構築" }] },
+          { "label": "中小企業", "stat": "1.2億", "points": [{ "text": "高い成約数" }, { "text": "セルフサービス型" }] },
+          { "label": "個人", "stat": "0.2億", "points": [{ "text": "急成長中" }, { "text": "フリーミアム転換" }] }
+        ]
+      }
+    },
+    {
+      "layout": 40,
+      "decoration": "none",
+      "content": {
+        "title": "製品デモ",
+        "video": { "description": "プロダクト操作ウォークスルー" },
+        "overlay": "2分でわかる製品紹介"
+      }
+    },
+    {
+      "layout": 41,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "仕組みと特長",
+        "body": "データ取り込みからインサイト生成まで、ワークフロー全体を自動化。デモで実際の動きをご覧ください。",
+        "video": { "description": "プラットフォーム操作デモ" }
+      }
+    },
+    {
+      "layout": 42,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "お客様の声",
+        "body": "導入企業様から、業務変革の実体験と具体的な成果について直接お話しいただきました。",
+        "video": { "description": "顧客インタビュー動画" }
+      }
+    },
+    {
+      "layout": 43,
+      "decoration": { "corners": ["bottom-left", "bottom-right"] },
+      "content": {
+        "video": { "description": "新機能ハイライト映像" },
+        "caption": "バージョン3.0の新機能をご紹介"
+      }
+    },
+    {
+      "layout": 44,
+      "decoration": "lines-double",
+      "content": {
+        "title": "改善効果の比較",
+        "leftVideo": { "description": "従来のワークフロー" },
+        "rightVideo": { "description": "新しいワークフロー" },
+        "leftLabel": "導入前",
+        "rightLabel": "導入後"
+      }
+    }
+  ]
+}
