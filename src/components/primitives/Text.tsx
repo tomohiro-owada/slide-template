@@ -15,7 +15,7 @@ interface TextProps {
 
 const variantStyles: Record<TextVariant, CSSProperties> = {
   h1: {
-    fontFamily: tokens.font.heading,
+    fontFamily: 'var(--font-heading)',
     fontSize: tokens.size.h1,
     fontWeight: tokens.font.weight.black,
     color: tokens.layout.text.heading,
@@ -23,42 +23,42 @@ const variantStyles: Record<TextVariant, CSSProperties> = {
     letterSpacing: '-0.02em',
   },
   h2: {
-    fontFamily: tokens.font.heading,
+    fontFamily: 'var(--font-heading)',
     fontSize: tokens.size.h2,
     fontWeight: tokens.font.weight.bold,
     color: tokens.layout.text.heading,
     lineHeight: 1.2,
   },
   h3: {
-    fontFamily: tokens.font.heading,
+    fontFamily: 'var(--font-heading)',
     fontSize: tokens.size.h3,
     fontWeight: tokens.font.weight.bold,
     color: tokens.layout.text.heading,
     lineHeight: 1.3,
   },
   h4: {
-    fontFamily: tokens.font.heading,
+    fontFamily: 'var(--font-heading)',
     fontSize: tokens.size.h4,
     fontWeight: tokens.font.weight.semibold,
     color: tokens.layout.text.heading,
     lineHeight: 1.3,
   },
   body: {
-    fontFamily: tokens.font.body,
+    fontFamily: 'var(--font-body)',
     fontSize: tokens.size.body,
     fontWeight: tokens.font.weight.normal,
     color: tokens.layout.text.body,
     lineHeight: 1.6,
   },
   caption: {
-    fontFamily: tokens.font.body,
+    fontFamily: 'var(--font-body)',
     fontSize: tokens.size.caption,
     fontWeight: tokens.font.weight.normal,
     color: tokens.layout.text.muted,
     lineHeight: 1.5,
   },
   label: {
-    fontFamily: tokens.font.body,
+    fontFamily: 'var(--font-body)',
     fontSize: tokens.size.label,
     fontWeight: tokens.font.weight.medium,
     color: tokens.layout.text.muted,
@@ -67,7 +67,7 @@ const variantStyles: Record<TextVariant, CSSProperties> = {
     letterSpacing: '0.05em',
   },
   number: {
-    fontFamily: tokens.font.heading,
+    fontFamily: 'var(--font-heading)',
     fontSize: tokens.size.number,
     fontWeight: tokens.font.weight.black,
     color: tokens.layout.text.heading,

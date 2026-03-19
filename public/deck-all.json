@@ -9,6 +9,10 @@
     "layout": "warm-minimal",
     "chart": "default"
   },
+  "fonts": {
+    "en": { "heading": "Cormorant Garamond", "body": "Poppins" },
+    "ja": { "heading": "Shippori Mincho", "body": "Zen Kaku Gothic New" }
+  },
   "defaults": {
     "decoration": "curves-diagonal",
     "exposure": 0.8

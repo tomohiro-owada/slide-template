@@ -127,6 +127,7 @@ export function DeckViewer({ deckUrl }: DeckViewerProps) {
             <SlideFrame
               slideIndex={activeSlide}
               decoration={slide.decoration}
+              fonts={deck.fonts}
             >
               <Component content={slide.content} slideIndex={activeSlide} />
             </SlideFrame>

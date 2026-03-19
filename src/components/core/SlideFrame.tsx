@@ -6,8 +6,9 @@ import type { DecorationConfig } from '../../types/slide';
 interface SlideFrameProps {
   children: ReactNode;
   slideIndex: number;
-  decoration?: DecorationConfig;  // 全ページ共通のデコレーション設定
+  decoration?: DecorationConfig;
   backgroundColor?: string;
+  fonts?: { heading: string; body: string };  // deck.json のフォント上書き
   style?: CSSProperties;
 }
 
@@ -16,6 +17,7 @@ export function SlideFrame({
   slideIndex,
   decoration,
   backgroundColor,
+  fonts,
   style,
 }: SlideFrameProps) {
   const bgColor = backgroundColor ?? tokens.layout.slide.background;
@@ -29,7 +31,9 @@ export function SlideFrame({
         height: tokens.slide.height,
         backgroundColor: bgColor,
         overflow: 'hidden',
-        fontFamily: tokens.font.body,
+        fontFamily: fonts?.body ?? tokens.font.body,
+        '--font-heading': fonts?.heading ?? tokens.font.heading,
+        '--font-body': fonts?.body ?? tokens.font.body,
         ...style,
       }}
     >

@@ -16,7 +16,7 @@ export function TwoColumnTextImageSlide({ content }: SlideProps<TwoColumnTextIma
       <Flex direction="row" gap="xl" align="stretch" style={{ flex: 1 }}>
         {/* Text column */}
         <Flex direction="col" flex={1} justify="center">
-          <Text variant="body">{content.body}</Text>
+          <Text variant="h3" weight="normal" style={{ lineHeight: 1.6 }}>{content.body}</Text>
         </Flex>
 
         {/* Image column */}
