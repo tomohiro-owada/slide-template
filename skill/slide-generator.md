@@ -160,6 +160,142 @@ decoration はデッキの defaults で1つ選ぶ。内容が混在する場合�
 
 この情報から自動的に画像生成依頼MDファイルが生成される。
 
+## レイアウト別コンテンツスペック（実測値）
+
+以下はレイアウトが崩れないことを確認済みの文字数・個数・メディア形式。**この範囲内で生成すること。**
+
+### #1 title
+- title: ~15字 / subtitle: ~26字 / presenter: ~6字 / date: ~10字
+
+### #2 section-start
+- sectionNumber: 2字 / title: ~13字 / subtitle: ~31字
+
+### #3 section-end
+- title: ~13字 / keyPoints: 3個 / keyPoints[].text: ~31字
+
+### #4 table-of-contents
+- items: 3〜6個 / items[].number: 2字 / items[].label: ~12字 / items[].description: ~23字
+
+### #5 closing
+- title: ~9字 / subtitle: ~23字 / contactName: ~6字 / contactEmail: ~18字 / contactUrl: ~19字
+
+### #6 two-col-comparison
+- title: ~15字 / leftLabel: ~6字 / rightLabel: ~5字 / leftPoints: 3個 / leftPoints[].text: ~16字 / rightPoints: 3個 / rightPoints[].text: ~15字
+
+### #7 two-col-text-image
+- title: ~12字 / body: ~100字 / image: [16:9]
+
+### #8 two-col-image-text
+- title: ~16字 / body: ~100字 / image: [16:9]
+
+### #9 three-col-image-text
+- title: ~12字 / columns: 3個 / columns[].title: ~10字 / columns[].body: ~15字 / columns[].image: [1:1]
+
+### #10 three-col-accent
+- title: ~13字 / columns: 3個 / columns[].title: ~7字 / columns[].body: ~30字 / accentIndex: 0-2
+
+### #11 four-col
+- title: ~11字 / columns: 4個 / columns[].icon: emoji / columns[].title: ~10字 / columns[].body: ~18字
+
+### #12 five-col
+- title: ~16字 / columns: 5個 / columns[].title: ~8字 / columns[].body: ~8字 / columns[].level: 1-5
+
+### #13 two-by-two-grid
+- title: ~15字 / items: 4個 / items[].title: ~7字 / items[].body: ~16字 / items[].image: [4:3]
+
+### #14 two-by-three-grid
+- title: ~9字 / items: 6個 / items[].title: ~5字 / items[].body: ~4字 / items[].image: [4:3]
+
+### #15 bullet-three-step
+- title: ~11字 / steps: 3個 / steps[].title: ~9字 / steps[].body: ~53字
+
+### #16 numbered-steps
+- title: ~15字 / steps: 3〜4個 / steps[].number: 2字 / steps[].title: ~7字 / steps[].body: ~14字
+
+### #17 timeline
+- title: ~15字 / events: 3〜4個 / events[].date: ~2字 / events[].title: ~8字 / events[].description: ~15字
+
+### #18 icon-list
+- title: ~13字 / items: 3〜4個 / items[].icon: アイコン名 / items[].title: ~19字 / items[].body: ~28字
+
+### #19 basic-panel
+- title: ~14字 / body: ~126字 / footer: ~20字 / image: [16:9]
+
+### #20 emphasis-panel
+- title: ~14字 / body: ~102字 / highlight: ~37字
+
+### #21 glass-panel
+- title: ~10字 / body: ~48字 / backgroundImage: [16:9]
+
+### #22 gradient-panel
+- title: ~17字 / body: ~79字
+
+### #23 card
+- title: ~9字 / body: ~87字 / tags: 3個 / tags[].text: ~10字 / image: [4:3]
+
+### #24 fullscreen-bg
+- title: ~20字 / subtitle: ~33字 / backgroundImage: [16:9]
+
+### #25 right-aligned-bg
+- title: ~16字 / body: ~79字 / backgroundImage: [9:16]
+
+### #26 day-month
+- day: 2字 / month: ~5字 / title: ~14字 / body: ~56字
+
+### #27 split-background
+- title: ~13字 / body: ~23字 / images: 2〜3個 / images[].image: [9:16]
+
+### #28 statistics
+- title: ~11字 / stats: 1〜3個 / stats[].value: ~5字 / stats[].label: ~7字 / stats[].trend: up|down|neutral / footnote: ~19字
+
+### #29 center-message
+- message: ~15字 / subtext: ~57字
+
+### #30 qanda
+- title: ~3字 / subtitle: ~32字
+
+### #31 qr-code
+- title: ~16字 / url: URL文字列 / description: ~44字
+
+### #32 question-prompt
+- question: ~37字 / subtext: ~20字
+
+### #33 decorative
+- title: ~17字 / body: ~79字
+
+### #34 inline-images
+- title: ~14字 / body: ~61字 / images: 3個 / images[].caption: ~9字 / images[].image: [4:3]
+
+### #35 statistics-ratio
+- title: ~12字 / ratios: 2〜3個 / ratios[].value: ~3字 / ratios[].label: ~11字 / ratios[].total: number
+
+### #36 text-stats-panel
+- title: ~12字 / body: ~95字 / stats: 2個 / stats[].value: ~4字 / stats[].label: ~11字
+
+### #37 glass-summary
+- title: ~17字 / keyPoints: 3個 / keyPoints[].text: ~31字 / backgroundImage: [16:9]
+
+### #38 list-stats-panel
+- title: ~12字 / items: 3個 / items[].text: ~31字 / stats: 2個 / stats[].value: ~5字 / stats[].label: ~6字
+
+### #39 comparison-stats
+- title: ~16字 / categories: 2〜3個 / categories[].label: ~10字 / categories[].stat: ~5字 / categories[].points: 2個 / categories[].points[].text: ~20字
+
+### #40 fullscreen-video
+- title: ~12字 / overlay: ~23字 / video: [16:9]
+
+### #41 video-text
+- title: ~12字 / body: ~85字 / video: [16:9]
+
+### #42 text-video
+- title: ~14字 / body: ~85字 / video: [16:9]
+
+### #43 video-caption
+- caption: ~29字 / video: [16:9]
+
+### #44 two-video-comparison
+- title: ~14字 / leftLabel: ~6字 / rightLabel: ~5字 / leftVideo: [16:9] / rightVideo: [16:9]
+
 ## 実行手順
 
 1. ユーザーの情報を分析し、セクション構成を決める
