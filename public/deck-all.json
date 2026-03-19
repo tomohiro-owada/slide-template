@@ -1,0 +1,485 @@
+{
+  "meta": {
+    "title": "All 44 Layouts Demo",
+    "author": "towada",
+    "date": "2026-03-20"
+  },
+  "colors": {
+    "palette": "default",
+    "layout": "warm-minimal",
+    "chart": "default"
+  },
+  "defaults": {
+    "decoration": "curves-diagonal",
+    "exposure": 0.8
+  },
+  "slides": [
+    {
+      "layout": 1,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "All 44 Layouts",
+        "subtitle": "Complete template showcase",
+        "presenter": "towada",
+        "date": "2026-03-20"
+      }
+    },
+    {
+      "layout": 2,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "sectionNumber": "01",
+        "title": "Section Start",
+        "subtitle": "Getting started with the basics"
+      }
+    },
+    {
+      "layout": 3,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "Key Takeaways",
+        "keyPoints": [
+          { "text": "Revenue grew 23% year-over-year" },
+          { "text": "3 new enterprise clients acquired" },
+          { "text": "APAC expansion on track" }
+        ]
+      }
+    },
+    {
+      "layout": 4,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "items": [
+          { "number": "01", "label": "Introduction", "description": "Overview of the project" },
+          { "number": "02", "label": "Analysis", "description": "Data-driven insights" },
+          { "number": "03", "label": "Strategy", "description": "Our approach forward" },
+          { "number": "04", "label": "Results", "description": "Key achievements" },
+          { "number": "05", "label": "Next Steps", "description": "Future roadmap" },
+          { "number": "06", "label": "Q&A", "description": "Open discussion" }
+        ]
+      }
+    },
+    {
+      "layout": 5,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "Thank You",
+        "subtitle": "We appreciate your time",
+        "contactName": "towada",
+        "contactEmail": "towada@example.com",
+        "contactUrl": "https://example.com"
+      }
+    },
+    {
+      "layout": 6,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "Before vs After",
+        "leftLabel": "Before",
+        "leftPoints": [{ "text": "Manual processes" }, { "text": "Slow deployment" }, { "text": "Limited visibility" }],
+        "rightLabel": "After",
+        "rightPoints": [{ "text": "Fully automated" }, { "text": "CI/CD pipeline" }, { "text": "Real-time dashboard" }]
+      }
+    },
+    {
+      "layout": 7,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "Our Approach",
+        "body": "We combine cutting-edge technology with human-centered design to deliver solutions that truly matter.",
+        "image": { "description": "Team collaborating on whiteboard" }
+      }
+    },
+    {
+      "layout": 8,
+      "decoration": { "corners": ["bottom-left"] },
+      "content": {
+        "title": "Product Showcase",
+        "body": "The all-new dashboard gives you complete visibility into your operations with real-time analytics.",
+        "image": { "description": "Product dashboard screenshot" }
+      }
+    },
+    {
+      "layout": 9,
+      "decoration": { "corners": ["top-left", "top-right"] },
+      "content": {
+        "title": "Our Services",
+        "columns": [
+          { "image": { "description": "Consulting icon" }, "title": "Consulting", "body": "Expert guidance" },
+          { "image": { "description": "Development icon" }, "title": "Development", "body": "Custom solutions" },
+          { "image": { "description": "Support icon" }, "title": "Support", "body": "24/7 assistance" }
+        ]
+      }
+    },
+    {
+      "layout": 10,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Pricing Plans",
+        "columns": [
+          { "title": "Starter", "body": "$29/mo\n5 users\nBasic analytics" },
+          { "title": "Professional", "body": "$99/mo\n50 users\nAdvanced analytics" },
+          { "title": "Enterprise", "body": "Custom\nUnlimited\nFull suite" }
+        ],
+        "accentIndex": 1
+      }
+    },
+    {
+      "layout": 11,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "Core Values",
+        "columns": [
+          { "icon": "💡", "title": "Innovation", "body": "Pushing boundaries" },
+          { "icon": "🤝", "title": "Trust", "body": "Building relationships" },
+          { "icon": "🎯", "title": "Focus", "body": "Results-driven" },
+          { "icon": "🌍", "title": "Global", "body": "Worldwide reach" }
+        ]
+      }
+    },
+    {
+      "layout": 12,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Skill Assessment",
+        "columns": [
+          { "title": "Beginner", "body": "Starting", "level": 1 },
+          { "title": "Basic", "body": "Fundamentals", "level": 2 },
+          { "title": "Intermediate", "body": "Competent", "level": 3 },
+          { "title": "Advanced", "body": "Proficient", "level": 4 },
+          { "title": "Expert", "body": "Mastery", "level": 5 }
+        ]
+      }
+    },
+    {
+      "layout": 13,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "Market Overview",
+        "items": [
+          { "image": { "description": "Revenue chart" }, "title": "Revenue", "body": "Growing steadily" },
+          { "image": { "description": "Users graph" }, "title": "Users", "body": "1M+ active" },
+          { "image": { "description": "Regions map" }, "title": "Regions", "body": "12 countries" },
+          { "image": { "description": "Partners" }, "title": "Partners", "body": "50+ integrations" }
+        ]
+      }
+    },
+    {
+      "layout": 14,
+      "decoration": { "corners": ["bottom-left", "bottom-right"] },
+      "content": {
+        "title": "Portfolio",
+        "items": [
+          { "image": { "description": "Project A" }, "title": "Alpha", "body": "SaaS" },
+          { "image": { "description": "Project B" }, "title": "Beta", "body": "Mobile" },
+          { "image": { "description": "Project C" }, "title": "Gamma", "body": "Platform" },
+          { "image": { "description": "Project D" }, "title": "Delta", "body": "IoT" },
+          { "image": { "description": "Project E" }, "title": "Epsilon", "body": "AI/ML" },
+          { "image": { "description": "Project F" }, "title": "Zeta", "body": "Cloud" }
+        ]
+      }
+    },
+    {
+      "layout": 15,
+      "decoration": { "corners": ["top-left", "top-right"] },
+      "content": {
+        "title": "Our Process",
+        "steps": [
+          { "title": "Discovery", "body": "Analyze current situation and identify opportunities." },
+          { "title": "Design", "body": "Create a tailored solution blueprint." },
+          { "title": "Deliver", "body": "Implement with continuous feedback." }
+        ]
+      }
+    },
+    {
+      "layout": 16,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Getting Started",
+        "steps": [
+          { "number": "01", "title": "Sign Up", "body": "Create account" },
+          { "number": "02", "title": "Configure", "body": "Set preferences" },
+          { "number": "03", "title": "Connect", "body": "Link data" },
+          { "number": "04", "title": "Launch", "body": "Go live" }
+        ]
+      }
+    },
+    {
+      "layout": 17,
+      "decoration": "lines-mixed",
+      "content": {
+        "title": "Project Roadmap",
+        "events": [
+          { "date": "Q1", "title": "Research", "description": "Market analysis" },
+          { "date": "Q2", "title": "Prototype", "description": "MVP build" },
+          { "date": "Q3", "title": "Beta", "description": "User testing" },
+          { "date": "Q4", "title": "Launch", "description": "Public release" }
+        ]
+      }
+    },
+    {
+      "layout": 18,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "Why Choose Us",
+        "items": [
+          { "icon": "check", "title": "Proven Track Record", "body": "10+ years delivering results" },
+          { "icon": "star", "title": "Expert Team", "body": "Industry specialists" },
+          { "icon": "shield", "title": "Enterprise Security", "body": "SOC 2 certified" },
+          { "icon": "clock", "title": "24/7 Support", "body": "Always available" }
+        ]
+      }
+    },
+    {
+      "layout": 19,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "Featured Story",
+        "image": { "description": "Case study hero image" },
+        "body": "Our latest case study demonstrates how Company X achieved a 40% reduction in operational costs through digital transformation.",
+        "footer": "Published March 2026"
+      }
+    },
+    {
+      "layout": 20,
+      "decoration": { "corners": ["bottom-right"] },
+      "content": {
+        "title": "Important Note",
+        "body": "The migration window is scheduled for March 25-27. All teams should complete preparations by March 24.",
+        "highlight": "Action Required: Complete by March 24"
+      }
+    },
+    {
+      "layout": 21,
+      "decoration": "none",
+      "content": {
+        "title": "Our Vision",
+        "body": "Technology seamlessly enhancing human potential.",
+        "backgroundImage": { "description": "Abstract technology background" }
+      }
+    },
+    {
+      "layout": 22,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "Mission Statement",
+        "body": "To empower businesses with intelligent solutions that drive sustainable growth."
+      }
+    },
+    {
+      "layout": 23,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "Team Lead",
+        "image": { "description": "Profile photo" },
+        "body": "Jane Smith brings 15 years of experience in digital transformation across 12 countries.",
+        "tags": [{ "text": "Leadership" }, { "text": "Strategy" }, { "text": "Innovation" }]
+      }
+    },
+    {
+      "layout": 24,
+      "decoration": "none",
+      "content": {
+        "title": "Reimagine Everything",
+        "subtitle": "The future of enterprise software",
+        "backgroundImage": { "description": "Dramatic landscape" }
+      }
+    },
+    {
+      "layout": 25,
+      "decoration": "none",
+      "content": {
+        "title": "About Our Office",
+        "body": "Located in the heart of Tokyo, our office fosters collaboration and creativity.",
+        "backgroundImage": { "description": "Modern office space" }
+      }
+    },
+    {
+      "layout": 26,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "day": "25",
+        "month": "March",
+        "title": "Product Launch",
+        "body": "Mark your calendars for the biggest release of the year."
+      }
+    },
+    {
+      "layout": 27,
+      "decoration": "none",
+      "content": {
+        "title": "Our Locations",
+        "body": "Present in 12 countries",
+        "images": [{ "image": { "description": "Tokyo" } }, { "image": { "description": "New York" } }, { "image": { "description": "London" } }]
+      }
+    },
+    {
+      "layout": 28,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Key Metrics",
+        "stats": [
+          { "value": "$4.2M", "label": "Revenue", "trend": "up" },
+          { "value": "23%", "label": "Growth", "trend": "up" },
+          { "value": "150+", "label": "Clients", "trend": "up" }
+        ],
+        "footnote": "vs previous quarter"
+      }
+    },
+    {
+      "layout": 29,
+      "decoration": { "corners": ["top-left", "top-right", "bottom-left", "bottom-right"] },
+      "content": {
+        "message": "Think Different",
+        "subtext": "Innovation distinguishes between a leader and a follower."
+      }
+    },
+    {
+      "layout": 30,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "title": "Q&A",
+        "subtitle": "We'd love to hear your questions"
+      }
+    },
+    {
+      "layout": 31,
+      "decoration": { "corners": ["bottom-left"] },
+      "content": {
+        "title": "Download Our App",
+        "url": "https://example.com/app",
+        "description": "Scan to download and get started in seconds."
+      }
+    },
+    {
+      "layout": 32,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "question": "What if we could reduce costs by 50%?",
+        "subtext": "Let us show you how."
+      }
+    },
+    {
+      "layout": 33,
+      "decoration": { "corners": ["top-right", "bottom-left"] },
+      "content": {
+        "title": "Design Philosophy",
+        "body": "Great design is how it works. We obsess over every pixel and every interaction."
+      }
+    },
+    {
+      "layout": 34,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "Design Process",
+        "body": "Iterative design refined through multiple rounds of feedback.",
+        "images": [
+          { "image": { "description": "Wireframe" }, "caption": "Wireframe" },
+          { "image": { "description": "Mockup" }, "caption": "Mockup" },
+          { "image": { "description": "Final" }, "caption": "Final" }
+        ]
+      }
+    },
+    {
+      "layout": 35,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Market Share",
+        "ratios": [
+          { "value": "72%", "label": "Our Product", "total": 100 },
+          { "value": "18%", "label": "Competitor A", "total": 100 },
+          { "value": "10%", "label": "Others", "total": 100 }
+        ]
+      }
+    },
+    {
+      "layout": 36,
+      "decoration": "lines-mixed",
+      "content": {
+        "title": "Growth Story",
+        "body": "Over the past year, we expanded into 3 new markets while maintaining our commitment to quality.",
+        "stats": [{ "value": "340%", "label": "User Growth" }, { "value": "$12M", "label": "ARR" }]
+      }
+    },
+    {
+      "layout": 37,
+      "decoration": "none",
+      "content": {
+        "title": "Executive Summary",
+        "keyPoints": [
+          { "text": "Revenue exceeded targets by 15%" },
+          { "text": "Customer satisfaction at 94%" },
+          { "text": "Launched in 3 new markets" }
+        ],
+        "backgroundImage": { "description": "Abstract gradient" }
+      }
+    },
+    {
+      "layout": 38,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Achievements",
+        "items": [{ "text": "Launched v2.0 with 50+ features" }, { "text": "Expanded to 120 members" }, { "text": "Won Best SaaS 2026" }],
+        "stats": [{ "value": "99.9%", "label": "Uptime" }, { "value": "4.8", "label": "Rating" }]
+      }
+    },
+    {
+      "layout": 39,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Segment Analysis",
+        "categories": [
+          { "label": "Enterprise", "stat": "$2.8M", "points": [{ "text": "High-value contracts" }, { "text": "Long-term relationships" }] },
+          { "label": "SMB", "stat": "$1.2M", "points": [{ "text": "High volume" }, { "text": "Self-service" }] },
+          { "label": "Consumer", "stat": "$0.2M", "points": [{ "text": "Growing rapidly" }, { "text": "Freemium" }] }
+        ]
+      }
+    },
+    {
+      "layout": 40,
+      "decoration": "none",
+      "content": {
+        "title": "Product Demo",
+        "video": { "description": "Product walkthrough" },
+        "overlay": "Watch our 2-minute tour"
+      }
+    },
+    {
+      "layout": 41,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "How It Works",
+        "body": "Our platform automates the entire workflow from data ingestion to insight generation.",
+        "video": { "description": "Platform demo" }
+      }
+    },
+    {
+      "layout": 42,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "title": "Customer Story",
+        "body": "Hear directly from our customers about how our solution transformed their operations.",
+        "video": { "description": "Customer testimonial" }
+      }
+    },
+    {
+      "layout": 43,
+      "decoration": { "corners": ["bottom-left", "bottom-right"] },
+      "content": {
+        "video": { "description": "Feature highlight reel" },
+        "caption": "See what's new in version 3.0"
+      }
+    },
+    {
+      "layout": 44,
+      "decoration": "lines-double",
+      "content": {
+        "title": "Before & After",
+        "leftVideo": { "description": "Old workflow" },
+        "rightVideo": { "description": "New workflow" },
+        "leftLabel": "Before",
+        "rightLabel": "After"
+      }
+    }
+  ]
+}
