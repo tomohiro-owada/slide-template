@@ -133,10 +133,10 @@
       "content": {
         "title": "行動指針",
         "columns": [
-          { "icon": "💡", "title": "革新", "body": "常に新しい挑戦を" },
-          { "icon": "🤝", "title": "信頼", "body": "誠実な関係構築" },
-          { "icon": "🎯", "title": "集中", "body": "成果にこだわる" },
-          { "icon": "🌍", "title": "共創", "body": "多様性を力に" }
+          { "icon": "lightbulb", "title": "革新", "body": "常に新しい挑戦を" },
+          { "icon": "handshake", "title": "信頼", "body": "誠実な関係構築" },
+          { "icon": "target", "title": "集中", "body": "成果にこだわる" },
+          { "icon": "globe", "title": "共創", "body": "多様性を力に" }
         ]
       }
     },

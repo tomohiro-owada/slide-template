@@ -1,4 +1,4 @@
-import { Flex, Grid, Text, Spacer } from '../../primitives';
+import { Flex, Grid, Text, Spacer, Icon } from '../../primitives';
 import { tokens } from '../../../config/tokens';
 import type { SlideProps } from '../../../types/slide';
 
@@ -28,15 +28,13 @@ export function IconListSlide({ content }: SlideProps<IconListContent>) {
               width: iconSize,
               height: iconSize,
               borderRadius: tokens.radius.full,
-              backgroundColor: tokens.layout.brand.primary,
+              backgroundColor: tokens.layout.slide.backgroundAlt,
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
               flexShrink: 0,
             }}>
-              <Text variant="h4" color={tokens.layout.text.inverse} align="center">
-                {item.icon.charAt(0).toUpperCase()}
-              </Text>
+              <Icon name={item.icon} size={24} color={tokens.layout.brand.primary} />
             </div>
             <Flex direction="col">
               <Text variant="h4">{item.title}</Text>

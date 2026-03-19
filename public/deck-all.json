@@ -134,10 +134,10 @@
       "content": {
         "title": "Core Values",
         "columns": [
-          { "icon": "💡", "title": "Innovation", "body": "Pushing boundaries" },
-          { "icon": "🤝", "title": "Trust", "body": "Building relationships" },
-          { "icon": "🎯", "title": "Focus", "body": "Results-driven" },
-          { "icon": "🌍", "title": "Global", "body": "Worldwide reach" }
+          { "icon": "lightbulb", "title": "Innovation", "body": "Pushing boundaries" },
+          { "icon": "handshake", "title": "Trust", "body": "Building relationships" },
+          { "icon": "target", "title": "Focus", "body": "Results-driven" },
+          { "icon": "globe", "title": "Global", "body": "Worldwide reach" }
         ]
       }
     },

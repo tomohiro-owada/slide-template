@@ -1,4 +1,4 @@
-import { Flex, Grid, Text, Spacer } from '../../primitives';
+import { Flex, Grid, Text, Spacer, Icon } from '../../primitives';
 import { tokens } from '../../../config/tokens';
 import type { SlideProps } from '../../../types/slide';
 
@@ -13,10 +13,10 @@ export interface FourColumnContent {
 
 export function FourColumnSlide({ content }: SlideProps<FourColumnContent>) {
   return (
-    <Flex direction="col" style={{ height: '100%', padding: tokens.spacing.slidePadding }}>
-      <Text variant="h2">{content.title}</Text>
-      <Spacer size="xl" />
-      <Grid columns={4} gap="lg" style={{ flex: 1 }}>
+    <Flex direction="col" align="center" justify="center" style={{ height: '100%' }}>
+      <Text variant="h2" align="center">{content.title}</Text>
+      <Spacer size="xxl" />
+      <Grid columns={4} gap="lg" style={{ width: '100%' }}>
         {content.columns.map((col, i) => (
           <Flex
             key={i}
@@ -31,9 +31,17 @@ export function FourColumnSlide({ content }: SlideProps<FourColumnContent>) {
             }}
           >
             {col.icon && (
-              <Text variant="h2" align="center" style={{ fontSize: 48 }}>
-                {col.icon}
-              </Text>
+              <div style={{
+                width: 64,
+                height: 64,
+                borderRadius: tokens.radius.full,
+                backgroundColor: tokens.layout.slide.backgroundAlt,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}>
+                <Icon name={col.icon} size={32} color={tokens.layout.brand.primary} />
+              </div>
             )}
             <Text variant="h4" align="center">{col.title}</Text>
             {col.body && (
