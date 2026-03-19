@@ -38,7 +38,6 @@ export function RightAlignedBgSlide({ content }: SlideProps<RightAlignedBgConten
       style={{
         width: '100%',
         height: '100%',
-        minHeight: tokens.slide.height,
         backgroundColor: tokens.layout.slide.background,
       }}
     >

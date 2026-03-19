@@ -12,57 +12,52 @@ export function ListStatsPanelSlide({ content }: SlideProps<ListStatsPanelConten
   const { title, items, stats } = content;
 
   return (
-    <Flex
-      direction="col"
-      style={{
-        width: '100%',
-        height: '100%',
-        minHeight: tokens.slide.height,
-        padding: tokens.spacing.slidePadding,
-        backgroundColor: tokens.layout.slide.background,
-      }}
-    >
+    <Flex direction="col" justify="center" style={{ width: '100%', height: '100%' }}>
       <Text variant="h2">{title}</Text>
-      <Spacer size="xl" />
+      <Spacer size="xxl" />
 
-      <Flex direction="row" gap="xxl" style={{ flex: 1 }}>
-        {/* Left: bullet list */}
-        <Flex direction="col" gap="md" flex={1} justify="flex-start">
+      <Flex direction="row" gap="xxl" align="flex-start">
+        {/* 左: リスト */}
+        <Flex direction="col" gap="lg" flex={1}>
           {items.map((item, i) => (
-            <Flex key={i} direction="row" gap="sm" align="flex-start">
-              <div
-                style={{
-                  width: 8,
-                  height: 8,
-                  borderRadius: tokens.radius.full,
-                  backgroundColor: tokens.layout.brand.primary,
-                  marginTop: 10,
-                  flexShrink: 0,
-                }}
-              />
-              <Text variant="body">{item.text}</Text>
+            <Flex
+              key={i}
+              direction="row"
+              gap="md"
+              align="center"
+              style={{
+                padding: `${tokens.spacing.md}px ${tokens.spacing.lg}px`,
+                borderLeft: `4px solid ${tokens.layout.brand.primary}`,
+                backgroundColor: tokens.layout.panel.background,
+                borderRadius: tokens.radius.md,
+              }}
+            >
+              <Text variant="h4" color={tokens.layout.text.muted} style={{ minWidth: 32 }}>
+                {String(i + 1).padStart(2, '0')}
+              </Text>
+              <Text variant="h4" weight="medium">{item.text}</Text>
             </Flex>
           ))}
         </Flex>
 
-        {/* Right: stat cards */}
-        <Flex direction="col" gap="lg" style={{ minWidth: 280 }}>
+        {/* 右: 統計カード */}
+        <Flex direction="col" gap="lg" style={{ minWidth: 360 }}>
           {stats.map((stat, i) => (
             <div
               key={i}
               style={{
                 backgroundColor: tokens.layout.panel.background,
                 borderRadius: tokens.radius.lg,
-                padding: tokens.spacing.lg,
+                padding: `${tokens.spacing.xl}px ${tokens.spacing.lg}px`,
                 boxShadow: tokens.shadow.md,
-                borderLeft: `4px solid ${tokens.layout.panel.emphasisBorder}`,
+                textAlign: 'center',
               }}
             >
-              <Text variant="number" color={tokens.layout.brand.primary} style={{ fontSize: 48 }}>
+              <Text variant="number" color={tokens.layout.brand.primary} style={{ fontSize: 72 }}>
                 {stat.value}
               </Text>
-              <Spacer size="xs" />
-              <Text variant="label">{stat.label}</Text>
+              <Spacer size="sm" />
+              <Text variant="h4" color={tokens.layout.text.muted}>{stat.label}</Text>
             </div>
           ))}
         </Flex>

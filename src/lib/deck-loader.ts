@@ -16,6 +16,10 @@ export interface DeckJson {
     layout?: string;
     chart?: string;
   };
+  fonts?: {
+    en?: { heading?: string; body?: string };
+    ja?: { heading?: string; body?: string };
+  };
   defaults: {
     decoration: string;  // プリセット名
     exposure: number;
@@ -51,8 +55,14 @@ export interface ResolvedSlide {
   notes?: string;
 }
 
+export interface ResolvedFonts {
+  heading: string;  // "'Playfair Display', 'Noto Serif JP', serif"
+  body: string;
+}
+
 export interface ResolvedDeck {
   meta: DeckJson['meta'];
+  fonts: ResolvedFonts;
   slides: ResolvedSlide[];
   defaultDecoration: DecorationConfig | undefined;
 }
@@ -65,8 +75,21 @@ export async function loadDeck(url: string): Promise<ResolvedDeck> {
   return resolveDeck(json);
 }
 
+// フォント合成
+function resolveFonts(deck: DeckJson): ResolvedFonts {
+  const enH = deck.fonts?.en?.heading ?? 'Playfair Display';
+  const enB = deck.fonts?.en?.body ?? 'Inter';
+  const jaH = deck.fonts?.ja?.heading ?? 'Noto Serif JP';
+  const jaB = deck.fonts?.ja?.body ?? 'Noto Sans JP';
+  return {
+    heading: `'${enH}', '${jaH}', serif`,
+    body: `'${enB}', '${jaB}', sans-serif`,
+  };
+}
+
 // DeckJson → ResolvedDeck
 export function resolveDeck(deck: DeckJson): ResolvedDeck {
+  const fonts = resolveFonts(deck);
   const defaultPreset = decorationPresets[deck.defaults.decoration];
   const defaultDecoration: DecorationConfig | undefined = defaultPreset
     ? { ...defaultPreset, exposure: deck.defaults.exposure }
@@ -131,5 +154,5 @@ export function resolveDeck(deck: DeckJson): ResolvedDeck {
     };
   }).filter((s): s is ResolvedSlide => s !== null);
 
-  return { meta: deck.meta, slides, defaultDecoration };
+  return { meta: deck.meta, fonts, slides, defaultDecoration };
 }

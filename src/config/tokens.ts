@@ -8,7 +8,17 @@ const tokens = {
   chart: chartTheme,
 
   font: {
-    // 画像のセリフ体に合わせる
+    // 英文フォントと日本語フォントを分離して定義
+    // 合成は heading / body で行う
+    en: {
+      heading: 'Playfair Display',
+      body:    'Inter',
+    },
+    ja: {
+      heading: 'Noto Serif JP',
+      body:    'Noto Sans JP',
+    },
+    // 合成済み（コンポーネントはこっちを使う）
     heading: "'Playfair Display', 'Noto Serif JP', serif",
     body:    "'Inter', 'Noto Sans JP', sans-serif",
     mono:    "'JetBrains Mono', monospace",

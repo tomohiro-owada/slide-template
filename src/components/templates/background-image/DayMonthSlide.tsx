@@ -20,7 +20,6 @@ export function DayMonthSlide({ content }: SlideProps<DayMonthContent>) {
       style={{
         width: '100%',
         height: '100%',
-        minHeight: tokens.slide.height,
         padding: tokens.spacing.slidePadding,
         backgroundColor: tokens.layout.slide.background,
       }}

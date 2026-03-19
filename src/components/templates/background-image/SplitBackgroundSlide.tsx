@@ -38,7 +38,6 @@ export function SplitBackgroundSlide({ content }: SlideProps<SplitBackgroundCont
         position: 'relative',
         width: '100%',
         height: '100%',
-        minHeight: tokens.slide.height,
         overflow: 'hidden',
       }}
     >

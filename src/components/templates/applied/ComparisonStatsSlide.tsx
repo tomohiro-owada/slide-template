@@ -17,13 +17,9 @@ export function ComparisonStatsSlide({ content }: SlideProps<ComparisonStatsCont
   return (
     <Flex
       direction="col"
-      style={{
-        width: '100%',
-        height: '100%',
-        minHeight: tokens.slide.height,
-        padding: tokens.spacing.slidePadding,
-        backgroundColor: tokens.layout.slide.background,
-      }}
+      align="center"
+      justify="center"
+      style={{ width: '100%', height: '100%' }}
     >
       <Text variant="h2" align="center">{title}</Text>
       <Spacer size="xl" />

@@ -38,8 +38,7 @@ export function GlassSummarySlide({ content }: SlideProps<GlassSummaryContent>) 
         position: 'relative',
         width: '100%',
         height: '100%',
-        minHeight: tokens.slide.height,
-        overflow: 'hidden',
+                overflow: 'hidden',
       }}
     >
       {/* Background image */}
@@ -64,8 +63,7 @@ export function GlassSummarySlide({ content }: SlideProps<GlassSummaryContent>) 
           position: 'relative',
           width: '100%',
           height: '100%',
-          minHeight: tokens.slide.height,
-          padding: tokens.spacing.slidePadding,
+                    padding: tokens.spacing.slidePadding,
         }}
       >
         <div
