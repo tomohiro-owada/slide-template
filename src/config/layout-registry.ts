@@ -46,6 +46,8 @@ import { GlassSummarySlide } from '../components/templates/applied/GlassSummaryS
 import { ListStatsPanelSlide } from '../components/templates/applied/ListStatsPanelSlide';
 import { ComparisonStatsSlide } from '../components/templates/applied/ComparisonStatsSlide';
 
+import { ChartSlide } from '../components/templates/special/ChartSlide';
+import { ChartTextSlide } from '../components/templates/special/ChartTextSlide';
 import { FullScreenVideoSlide } from '../components/templates/video/FullScreenVideoSlide';
 import { VideoTextSlide } from '../components/templates/video/VideoTextSlide';
 import { TextVideoSlide } from '../components/templates/video/TextVideoSlide';
@@ -483,6 +485,30 @@ export const layoutRegistry: Record<number, LayoutEntry> = {
       scenarios: ['部門比較', 'プラン比較+数値', '競合分析', 'セグメント別'],
       bestFor: ['multi-category-comparison', 'competitive-analysis', 'segment'],
       notFor: ['single-topic', 'timeline'],
+    },
+  },
+
+  // ============================
+  // I. チャート系
+  // ============================
+  45: {
+    id: 'chart', name: 'チャートスライド', category: 'special',
+    component: ChartSlide, schema: {} as any, decoration: true,
+    useCase: {
+      primary: 'グラフ1つがスライドの主役で、データを視覚的に伝えるとき',
+      scenarios: ['売上推移グラフ', '市場シェア円グラフ', '月次比較棒グラフ'],
+      bestFor: ['chart', 'graph', 'data-visualization', 'trend'],
+      notFor: ['text-heavy', 'narrative', 'no-data'],
+    },
+  },
+  46: {
+    id: 'chart-text', name: 'チャート＋テキスト', category: 'special',
+    component: ChartTextSlide, schema: {} as any, decoration: true,
+    useCase: {
+      primary: 'グラフで見せながら横に主張や解説を大きく添えるとき',
+      scenarios: ['成長率グラフ+一言メッセージ', 'データ+解釈', 'チャート+結論'],
+      bestFor: ['chart-with-message', 'data-insight', 'chart-narrative'],
+      notFor: ['data-only', 'text-only'],
     },
   },
 
