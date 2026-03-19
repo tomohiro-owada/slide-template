@@ -13,51 +13,57 @@ export interface FiveColumnContent {
 
 export function FiveColumnSlide({ content }: SlideProps<FiveColumnContent>) {
   return (
-    <Flex direction="col" style={{ height: '100%', padding: tokens.spacing.slidePadding }}>
-      <Text variant="h2">{content.title}</Text>
-      <Spacer size="xl" />
-      <Grid columns={5} gap="md" style={{ flex: 1 }}>
+    <Flex direction="col" align="center" justify="center" style={{ height: '100%' }}>
+      <Text variant="h2" align="center">{content.title}</Text>
+      <Spacer size="xxl" />
+      <Grid columns={5} gap="lg" style={{ width: '100%' }}>
         {content.columns.map((col, i) => {
           const level = Math.min(Math.max(col.level ?? 0, 0), 5);
-          const barHeight = level > 0 ? `${(level / 5) * 100}%` : '0%';
+          const filled = level;
+          const empty = 5 - level;
 
           return (
             <Flex
               key={i}
               direction="col"
               align="center"
-              gap="sm"
+              gap="md"
               style={{
-                padding: tokens.spacing.md,
+                padding: tokens.spacing.lg,
                 backgroundColor: tokens.layout.panel.background,
                 borderRadius: tokens.radius.lg,
                 border: `1px solid ${tokens.layout.panel.border}`,
               }}
             >
-              {/* Level bar indicator */}
-              <Flex
-                align="flex-end"
-                justify="center"
-                style={{
-                  width: '100%',
-                  height: 120,
-                  backgroundColor: tokens.layout.slide.backgroundAlt,
-                  borderRadius: tokens.radius.sm,
-                  overflow: 'hidden',
-                }}
-              >
-                <div style={{
-                  width: '60%',
-                  height: barHeight,
-                  backgroundColor: tokens.layout.brand.primary,
-                  borderRadius: `${tokens.radius.sm}px ${tokens.radius.sm}px 0 0`,
-                  transition: 'height 0.3s ease',
-                }} />
+              {/* レベル数字 */}
+              <Text variant="number" color={tokens.layout.brand.primary} style={{ fontSize: 48 }}>
+                {level}
+              </Text>
+
+              {/* ドットインジケーター */}
+              <Flex direction="row" gap="xs" justify="center">
+                {Array.from({ length: filled }).map((_, j) => (
+                  <div key={`f${j}`} style={{
+                    width: 12,
+                    height: 12,
+                    borderRadius: tokens.radius.full,
+                    backgroundColor: tokens.layout.brand.primary,
+                  }} />
+                ))}
+                {Array.from({ length: empty }).map((_, j) => (
+                  <div key={`e${j}`} style={{
+                    width: 12,
+                    height: 12,
+                    borderRadius: tokens.radius.full,
+                    backgroundColor: tokens.layout.panel.border,
+                  }} />
+                ))}
               </Flex>
-              <Spacer size="xs" />
-              <Text variant="h4" align="center">{col.title}</Text>
+
+              <Spacer size="sm" />
+              <Text variant="h3" align="center">{col.title}</Text>
               {col.body && (
-                <Text variant="caption" align="center">{col.body}</Text>
+                <Text variant="body" align="center" color={tokens.layout.text.muted}>{col.body}</Text>
               )}
             </Flex>
           );

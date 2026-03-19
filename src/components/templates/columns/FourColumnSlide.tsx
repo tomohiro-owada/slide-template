@@ -43,7 +43,7 @@ export function FourColumnSlide({ content }: SlideProps<FourColumnContent>) {
                 <Icon name={col.icon} size={32} color={tokens.layout.brand.primary} />
               </div>
             )}
-            <Text variant="h4" align="center">{col.title}</Text>
+            <Text variant="h3" align="center">{col.title}</Text>
             {col.body && (
               <Text variant="body" align="center">{col.body}</Text>
             )}
