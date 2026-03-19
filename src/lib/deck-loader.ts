@@ -20,8 +20,14 @@ export interface DeckJson {
     en?: { heading?: string; body?: string };
     ja?: { heading?: string; body?: string };
   };
+  branding?: {
+    logo?: string;              // ロゴ画像パス（falseで非表示）
+    logoPosition?: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+    confidential?: boolean;     // true = 「社外秘」表示
+    confidentialText?: string;  // カスタムテキスト（省略時: "CONFIDENTIAL / 社外秘"）
+  };
   defaults: {
-    decoration: string;  // プリセット名
+    decoration: string;
     exposure: number;
   };
   slides: DeckSlide[];
@@ -60,9 +66,17 @@ export interface ResolvedFonts {
   body: string;
 }
 
+export interface ResolvedBranding {
+  logo?: string;
+  logoPosition: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right';
+  confidential: boolean;
+  confidentialText: string;
+}
+
 export interface ResolvedDeck {
   meta: DeckJson['meta'];
   fonts: ResolvedFonts;
+  branding: ResolvedBranding;
   slides: ResolvedSlide[];
   defaultDecoration: DecorationConfig | undefined;
 }
@@ -90,6 +104,12 @@ function resolveFonts(deck: DeckJson): ResolvedFonts {
 // DeckJson → ResolvedDeck
 export function resolveDeck(deck: DeckJson): ResolvedDeck {
   const fonts = resolveFonts(deck);
+  const branding: ResolvedBranding = {
+    logo: deck.branding?.logo,
+    logoPosition: deck.branding?.logoPosition ?? 'top-right',
+    confidential: deck.branding?.confidential ?? false,
+    confidentialText: deck.branding?.confidentialText ?? 'CONFIDENTIAL / 社外秘',
+  };
   const defaultPreset = decorationPresets[deck.defaults.decoration];
   const defaultDecoration: DecorationConfig | undefined = defaultPreset
     ? { ...defaultPreset, exposure: deck.defaults.exposure }
@@ -154,5 +174,5 @@ export function resolveDeck(deck: DeckJson): ResolvedDeck {
     };
   }).filter((s): s is ResolvedSlide => s !== null);
 
-  return { meta: deck.meta, fonts, slides, defaultDecoration };
+  return { meta: deck.meta, fonts, branding, slides, defaultDecoration };
 }

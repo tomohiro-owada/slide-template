@@ -9,6 +9,10 @@
     "layout": "warm-minimal",
     "chart": "default"
   },
+  "branding": {
+    "confidential": true,
+    "logoPosition": "bottom-right"
+  },
   "fonts": {
     "en": { "heading": "Cormorant Garamond", "body": "Poppins" },
     "ja": { "heading": "Shippori Mincho", "body": "Zen Kaku Gothic New" }
