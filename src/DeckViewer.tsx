@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { SlideFrame } from './components/core/SlideFrame';
 import { tokens } from './config/tokens';
 import { loadDeck, type ResolvedDeck, type ResolvedSlide } from './lib/deck-loader';
-import { exportToPDF, exportToImages, downloadBlob } from './lib/export-pdf';
 
 interface DeckViewerProps {
   deckUrl: string;
@@ -79,31 +78,7 @@ export function DeckViewer({ deckUrl }: DeckViewerProps) {
           ))}
         </div>
 
-        {/* エクスポート */}
-        <div style={{ marginTop: 20, padding: '12px 0', borderTop: '1px solid #333', display: 'flex', gap: 8 }}>
-          <button
-            onClick={async () => {
-              const blob = await exportToPDF();
-              downloadBlob(blob, `${deck.meta.title}.pdf`);
-            }}
-            style={btnStyle}
-          >
-            PDF Export
-          </button>
-          <button
-            onClick={async () => {
-              const blobs = await exportToImages();
-              blobs.forEach((blob, i) => {
-                downloadBlob(blob, `slide-${String(i + 1).padStart(2, '0')}.png`);
-              });
-            }}
-            style={btnStyle}
-          >
-            PNG Export
-          </button>
-        </div>
-
-        <div style={{ marginTop: 12, padding: '12px 0', borderTop: '1px solid #333', fontSize: 12 }}>
+        <div style={{ marginTop: 20, padding: '12px 0', borderTop: '1px solid #333', fontSize: 12 }}>
           <div>Slide {activeSlide + 1} / {deck.slides.length}</div>
           {slide?.notes && (
             <div style={{ marginTop: 8, color: '#aaa', lineHeight: 1.5 }}>
