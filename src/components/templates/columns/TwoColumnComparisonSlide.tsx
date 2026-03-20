@@ -10,49 +10,40 @@ export interface TwoColumnComparisonContent {
   rightPoints: Array<{ text: string }>;
 }
 
+function ComparisonColumn({ label, points, borderColor }: {
+  label: string;
+  points: Array<{ text: string }>;
+  borderColor: string;
+}) {
+  return (
+    <Flex direction="col" flex={1} style={{
+      padding: `${tokens.spacing.xl}px ${tokens.spacing.lg}px`,
+      backgroundColor: tokens.layout.panel.background,
+      borderRadius: tokens.radius.lg,
+      borderTop: `4px solid ${borderColor}`,
+    }}>
+      <Text variant="h3" color={tokens.layout.brand.primary}>{label}</Text>
+      <Spacer size="lg" />
+      <Flex direction="col" gap="md">
+        {points.map((point, i) => (
+          <Flex key={i} direction="row" gap="md" align="center">
+            <Text variant="h4" color={tokens.layout.text.muted} style={{ flexShrink: 0 }}>•</Text>
+            <Text variant="h4" weight="normal">{point.text}</Text>
+          </Flex>
+        ))}
+      </Flex>
+    </Flex>
+  );
+}
+
 export function TwoColumnComparisonSlide({ content }: SlideProps<TwoColumnComparisonContent>) {
   return (
-    <Flex direction="col" style={{ height: '100%', padding: tokens.spacing.slidePadding }}>
+    <Flex direction="col" justify="center" style={{ height: '100%' }}>
       <Text variant="h2">{content.title}</Text>
       <Spacer size="xl" />
       <Flex direction="row" gap="xl" style={{ flex: 1 }}>
-        {/* Left column */}
-        <Flex direction="col" flex={1} style={{
-          padding: tokens.spacing.lg,
-          backgroundColor: tokens.layout.panel.background,
-          borderRadius: tokens.radius.lg,
-          borderTop: `4px solid ${tokens.layout.panel.emphasisBorder}`,
-        }}>
-          <Text variant="h4" color={tokens.layout.brand.primary}>{content.leftLabel}</Text>
-          <Spacer size="md" />
-          <Flex direction="col" gap="sm">
-            {content.leftPoints.map((point, i) => (
-              <Flex key={i} direction="row" gap="sm" align="flex-start">
-                <Text variant="body" color={tokens.layout.text.muted} style={{ flexShrink: 0 }}>•</Text>
-                <Text variant="body">{point.text}</Text>
-              </Flex>
-            ))}
-          </Flex>
-        </Flex>
-
-        {/* Right column */}
-        <Flex direction="col" flex={1} style={{
-          padding: tokens.spacing.lg,
-          backgroundColor: tokens.layout.panel.background,
-          borderRadius: tokens.radius.lg,
-          borderTop: `4px solid ${tokens.layout.brand.secondary}`,
-        }}>
-          <Text variant="h4" color={tokens.layout.brand.primary}>{content.rightLabel}</Text>
-          <Spacer size="md" />
-          <Flex direction="col" gap="sm">
-            {content.rightPoints.map((point, i) => (
-              <Flex key={i} direction="row" gap="sm" align="flex-start">
-                <Text variant="body" color={tokens.layout.text.muted} style={{ flexShrink: 0 }}>•</Text>
-                <Text variant="body">{point.text}</Text>
-              </Flex>
-            ))}
-          </Flex>
-        </Flex>
+        <ComparisonColumn label={content.leftLabel} points={content.leftPoints} borderColor={tokens.layout.panel.emphasisBorder} />
+        <ComparisonColumn label={content.rightLabel} points={content.rightPoints} borderColor={tokens.layout.brand.secondary} />
       </Flex>
     </Flex>
   );

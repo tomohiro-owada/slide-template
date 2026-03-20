@@ -1,13 +1,15 @@
 {
   "meta": {
-    "title": "Q3 Revenue Report",
+    "title": "Claude Code 徹底活用ガイド",
     "author": "towada",
     "date": "2026-03-20"
   },
-  "colors": {
-    "palette": "default",
-    "layout": "warm-minimal",
-    "chart": "default"
+  "fonts": {
+    "en": { "heading": "DM Serif Display", "body": "Poppins" },
+    "ja": { "heading": "Shippori Mincho", "body": "Zen Kaku Gothic New" }
+  },
+  "branding": {
+    "confidential": false
   },
   "defaults": {
     "decoration": "curves-diagonal",
@@ -18,83 +20,151 @@
       "layout": 1,
       "decoration": { "corners": ["top-left", "bottom-right"] },
       "content": {
-        "title": "Q3 Revenue Report",
-        "subtitle": "2026年度 第3四半期 業績報告",
+        "title": "Claude Code\n徹底活用ガイド",
+        "subtitle": "非エンジニアのためのAI生産性革命",
         "presenter": "towada",
         "date": "2026-03-20"
-      }
+      },
+      "notes": "今日は、エンジニアじゃなくても使えるAIツールの話をします。難しい技術の話はしません。"
+    },
+    {
+      "layout": 32,
+      "decoration": { "corners": ["top-left", "bottom-right"] },
+      "content": {
+        "question": "まだ手作業で\nやってるんですか？",
+        "subtext": "経費精算、レポート作成、メール整理..."
+      },
+      "notes": "皆さん、毎月の経費精算にどれくらい時間かかってますか？レポート作成は？メールの整理は？ ここで少し間を置く。"
+    },
+    {
+      "layout": 29,
+      "decoration": { "corners": ["top-left", "top-right", "bottom-left", "bottom-right"] },
+      "content": {
+        "message": "2日 → 4時間",
+        "subtext": "AI導入による作業時間の変化（75%削減）"
+      },
+      "notes": "これ、エンジニアの開発時間の話ですけど、実は同じことが皆さんの日常業務でも起きてるんです。数字のインパクトを一呼吸おいて浸透させる。"
+    },
+    {
+      "layout": 6,
+      "decoration": { "corners": ["top-right"] },
+      "content": {
+        "title": "何が変わった？",
+        "leftLabel": "Before",
+        "leftPoints": [
+          { "text": "Excelを手入力" },
+          { "text": "資料作成に半日" },
+          { "text": "メール確認で1日が終わる" }
+        ],
+        "rightLabel": "After",
+        "rightPoints": [
+          { "text": "データを渡すだけで完成" },
+          { "text": "数分でスライド生成" },
+          { "text": "重要なメールだけ通知" }
+        ]
+      },
+      "notes": "左が今の皆さんの日常。右がAI導入後の世界です。大げさじゃなく、こうなります。"
     },
     {
       "layout": 4,
       "decoration": { "corners": ["top-right", "bottom-left"] },
       "content": {
         "items": [
-          { "number": "01", "label": "業績概要", "description": "売上・利益のハイライト" },
-          { "number": "02", "label": "事業別分析", "description": "セグメント別の詳細" },
-          { "number": "03", "label": "今後の展望", "description": "次四半期の計画" }
+          { "number": "01", "label": "エンジニアだけじゃない", "description": "AIが使える日常業務" },
+          { "number": "02", "label": "魔法の杖じゃない", "description": "正しい使い方のコツ" },
+          { "number": "03", "label": "チームで使い分ける", "description": "ツールの適材適所" }
         ]
-      }
+      },
+      "notes": "今日は3つのポイントに絞ってお話しします。"
     },
     {
-      "layout": 28,
+      "layout": 2,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "sectionNumber": "01",
+        "title": "エンジニアだけの\nツールじゃない",
+        "subtitle": "AIが活躍する日常業務"
+      },
+      "notes": "まず最初に、これはエンジニア専用のツールじゃないということをお伝えしたい。"
+    },
+    {
+      "layout": 18,
       "decoration": "lines-double",
       "content": {
-        "title": "Key Metrics",
-        "stats": [
-          { "value": "$4.2M", "label": "Revenue", "trend": "up" },
-          { "value": "23%", "label": "Growth", "trend": "up" },
-          { "value": "3", "label": "New Clients", "trend": "neutral" }
+        "title": "こんな業務が数分に",
+        "items": [
+          { "icon": "dollar", "title": "経費精算", "body": "CSVと領収書メールを突合して入力形式に自動変換" },
+          { "icon": "file", "title": "レポート作成", "body": "カレンダーの予定から案件別の稼働報告書を自動生成" },
+          { "icon": "mail", "title": "メール整理", "body": "未処理メールを監視し対応が必要なものだけSlackに通知" },
+          { "icon": "layers", "title": "スライド作成", "body": "メモを渡すだけでプレゼン資料を自動レイアウト" }
         ]
-      }
+      },
+      "notes": "経費精算、毎月やってますよね。AIに領収書のメールとCSVを渡すだけで、freeeの入力形式に変換してくれます。人間がやるのは最終チェックだけ。各事例を具体的に説明。"
     },
     {
-      "layout": 6,
-      "decoration": { "corners": ["top-right"] },
-      "content": {
-        "title": "Q2 vs Q3",
-        "leftLabel": "Q2",
-        "leftPoints": [
-          { "text": "売上 $3.4M" },
-          { "text": "顧客数 42社" },
-          { "text": "解約率 5.2%" }
-        ],
-        "rightLabel": "Q3",
-        "rightPoints": [
-          { "text": "売上 $4.2M" },
-          { "text": "顧客数 45社" },
-          { "text": "解約率 3.8%" }
-        ]
-      }
-    },
-    {
-      "layout": 7,
+      "layout": 2,
       "decoration": { "corners": ["bottom-right"] },
       "content": {
-        "title": "APAC Expansion",
-        "body": "アジア太平洋地域への進出を開始。シンガポールにリージョナルオフィスを開設し、現地チーム5名を採用。初年度の目標は$500Kの売上達成。",
-        "image": {
-          "description": "アジア太平洋地域の地図にオフィス所在地をマーク",
-          "style": "illustration",
-          "mood": "professional, modern"
-        }
-      }
+        "sectionNumber": "02",
+        "title": "魔法の杖じゃない",
+        "subtitle": "丸投げすると逆に生産性が下がる"
+      },
+      "notes": "ただし、注意点があります。AIは魔法の杖じゃないんです。"
+    },
+    {
+      "layout": 15,
+      "decoration": "lines-double",
+      "content": {
+        "title": "AIとの正しい付き合い方",
+        "steps": [
+          { "title": "小さく頼む", "body": "一度に大量の作業を丸投げしない。「まずこれだけやって」と区切ることで精度が劇的に上がる" },
+          { "title": "背景を伝える", "body": "「誰向けか」「どんなルールがあるか」を最初に共有する。コンテキストが品質を決める" },
+          { "title": "必ず確認する", "body": "AIの出力は「優秀な部下の下書き」。最終判断は人間が行う。これが品質の担保" }
+        ]
+      },
+      "notes": "3つだけ覚えてください。小さく頼む、背景を伝える、必ず確認する。この3つを守るだけで、AIの精度は段違いに上がります。"
+    },
+    {
+      "layout": 2,
+      "decoration": { "corners": ["top-left"] },
+      "content": {
+        "sectionNumber": "03",
+        "title": "チームで使い分ける",
+        "subtitle": "ツールの適材適所"
+      },
+      "notes": "最後に、AIツールにも得意不得意があるので、使い分けが大事という話をします。"
+    },
+    {
+      "layout": 9,
+      "decoration": { "corners": ["top-left", "top-right"] },
+      "content": {
+        "title": "AIツールの役割分担",
+        "columns": [
+          { "image": { "description": "頼れる先輩", "imageUrl": "/assets/claude-code.png" }, "title": "Claude Code", "body": "頼れる先輩。設計相談から複雑な作業まで" },
+          { "image": { "description": "優秀な新人", "imageUrl": "/assets/copilot.png" }, "title": "GitHub Copilot", "body": "優秀な新人。言われたことを爆速でこなす" },
+          { "image": { "description": "専門家", "imageUrl": "/assets/cursor.png" }, "title": "Cursor", "body": "専門家。大量の資料を一気に整理" }
+        ]
+      },
+      "notes": "人間のチームと同じで、AIにも役割があります。Claude Codeは設計から相談できる先輩。Copilotは言われたことをすぐやってくれる新人。Cursorは大量の作業を一気にやる専門家。使い分けると効果が最大化します。"
     },
     {
       "layout": 29,
       "decoration": { "corners": ["top-left", "top-right", "bottom-left", "bottom-right"] },
       "content": {
-        "message": "23% Growth",
-        "subtext": "過去最高の四半期成長率を達成"
-      }
+        "message": "導入しない理由\nもうないですよね？",
+        "subtext": "まずは小さな業務から。今日から始められます。"
+      },
+      "notes": "2日かかってた作業が4時間。経費精算もレポートも数分。しかも使い方は3つ覚えるだけ。導入しない理由、もうないですよね？ 力強く、でも押しつけがましくなく。"
     },
     {
       "layout": 5,
       "decoration": { "corners": ["top-left", "bottom-right"] },
       "content": {
-        "title": "Thank You",
+        "title": "ありがとうございました",
         "subtitle": "ご質問があればお気軽にどうぞ",
-        "contactEmail": "towada@example.com"
-      }
+        "contactName": "towada"
+      },
+      "notes": "ご清聴ありがとうございました。質問があればなんでもどうぞ。『うちの業務でも使える？』みたいな具体的なご相談も大歓迎です。"
     }
   ]
 }
