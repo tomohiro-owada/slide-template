@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Claude Code 徹底活用ガイド",
-    "author": "towada",
+    "author": "your-name",
     "date": "2026-03-20"
   },
   "fonts": {
@@ -22,7 +22,7 @@
       "content": {
         "title": "Claude Code\n徹底活用ガイド",
         "subtitle": "非エンジニアのためのAI生産性革命",
-        "presenter": "towada",
+        "presenter": "your-name",
         "date": "2026-03-20"
       },
       "notes": "今日は、エンジニアじゃなくても使えるAIツールの話をします。難しい技術の話はしません。"
@@ -162,7 +162,7 @@
       "content": {
         "title": "ありがとうございました",
         "subtitle": "ご質問があればお気軽にどうぞ",
-        "contactName": "towada"
+        "contactName": "your-name"
       },
       "notes": "ご清聴ありがとうございました。質問があればなんでもどうぞ。『うちの業務でも使える？』みたいな具体的なご相談も大歓迎です。"
     }

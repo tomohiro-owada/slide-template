@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "All 44 Layouts Demo",
-    "author": "towada",
+    "author": "your-name",
     "date": "2026-03-20"
   },
   "colors": {
@@ -24,7 +24,7 @@
       "content": {
         "title": "All 44 Layouts",
         "subtitle": "Complete template showcase",
-        "presenter": "towada",
+        "presenter": "your-name",
         "date": "2026-03-20"
       }
     },
@@ -69,8 +69,8 @@
       "content": {
         "title": "Thank You",
         "subtitle": "We appreciate your time",
-        "contactName": "towada",
-        "contactEmail": "towada@example.com",
+        "contactName": "your-name",
+        "contactEmail": "hello@example.com",
         "contactUrl": "https://example.com"
       }
     },

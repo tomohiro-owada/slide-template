@@ -8,11 +8,11 @@ import type { TemplateCategory, DecorationConfig } from './types/slide';
 // 全テンプレートのサンプルデータ
 const sampleContent: Record<number, Record<string, unknown>> = {
   // A. タイトル・セクション系
-  1: { title: 'Minimalist\nBusiness Slides', subtitle: 'Here is where your presentation begins', presenter: 'towada', date: '2026-03-20' },
+  1: { title: 'Minimalist\nBusiness Slides', subtitle: 'Here is where your presentation begins', presenter: 'your-name', date: '2026-03-20' },
   2: { sectionNumber: '01', title: 'Introduction', subtitle: 'Getting started with the basics' },
   3: { title: 'Key Takeaways', keyPoints: [{ text: 'Revenue grew 23% year-over-year' }, { text: '3 new enterprise clients acquired' }, { text: 'APAC expansion on track' }] },
   4: { items: [{ number: '01', label: 'Introduction', description: 'Describe the topic of the section here' }, { number: '02', label: 'Company', description: 'Describe the topic of the section here' }, { number: '03', label: 'Analysis', description: 'Describe the topic of the section here' }, { number: '04', label: 'Conclusion', description: 'Describe the topic of the section here' }, { number: '05', label: 'Business views', description: 'Describe the topic of the section here' }, { number: '06', label: 'Financial plan', description: 'Describe the topic of the section here' }] },
-  5: { title: 'Thank You', subtitle: 'We appreciate your time and attention', contactName: 'towada', contactEmail: 'towada@example.com', contactUrl: 'https://example.com' },
+  5: { title: 'Thank You', subtitle: 'We appreciate your time and attention', contactName: 'your-name', contactEmail: 'hello@example.com', contactUrl: 'https://example.com' },
 
   // B. カラムレイアウト系
   6: { title: 'Before vs After', leftLabel: 'Before', leftPoints: [{ text: 'Manual processes' }, { text: 'Slow deployment' }, { text: 'Limited visibility' }], rightLabel: 'After', rightPoints: [{ text: 'Fully automated' }, { text: 'CI/CD pipeline' }, { text: 'Real-time dashboard' }] },

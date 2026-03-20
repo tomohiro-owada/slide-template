@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "全44レイアウト日本語デモ",
-    "author": "towada",
+    "author": "your-name",
     "date": "2026-03-20"
   },
   "colors": {
@@ -29,7 +29,7 @@
       "content": {
         "title": "第3四半期\n業績報告",
         "subtitle": "2026年度 事業成長と今後の展望",
-        "presenter": "towada",
+        "presenter": "your-name",
         "date": "2026年3月20日"
       }
     },
@@ -74,8 +74,8 @@
       "content": {
         "title": "ご清聴ありがとう\nございました",
         "subtitle": "ご質問があればお気軽にどうぞ",
-        "contactName": "towada",
-        "contactEmail": "towada@example.com"
+        "contactName": "your-name",
+        "contactEmail": "hello@example.com"
       }
     },
     {
