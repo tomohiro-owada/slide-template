@@ -5,7 +5,7 @@ import type { SlideProps } from '../../../types/slide';
 export interface TwoByThreeGridContent {
   title?: string;
   items: Array<{
-    image?: { description?: string };
+    image?: { description?: string; imageUrl?: string };
     title: string;
     body?: string;
   }>;
@@ -24,21 +24,36 @@ export function TwoByThreeGridSlide({ content }: SlideProps<TwoByThreeGridConten
         {content.items.slice(0, 6).map((item, i) => (
           <Flex key={i} direction="col" gap="sm" style={{ minHeight: 0 }}>
             {item.image && (
-              <div style={{
-                width: '100%',
-                height: '100%',
-                minHeight: 200,
-                backgroundColor: tokens.layout.panel.border,
-                borderRadius: tokens.radius.md,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: tokens.layout.text.muted,
-                fontSize: tokens.size.caption,
-                flex: 1,
-              }}>
-                {item.image.description || 'Image'}
-              </div>
+              item.image.imageUrl ? (
+                <img
+                  src={item.image.imageUrl}
+                  alt={item.image.description ?? ''}
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: tokens.radius.md,
+                    minHeight: 200,
+                    flex: 1,
+                  }}
+                />
+              ) : (
+                <div style={{
+                  width: '100%',
+                  height: '100%',
+                  minHeight: 200,
+                  backgroundColor: tokens.layout.panel.border,
+                  borderRadius: tokens.radius.md,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: tokens.layout.text.muted,
+                  fontSize: tokens.size.caption,
+                  flex: 1,
+                }}>
+                  {item.image.description || 'Image'}
+                </div>
+              )
             )}
             <Text variant="h4">{item.title}</Text>
             {item.body && <Text variant="body">{item.body}</Text>}

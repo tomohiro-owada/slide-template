@@ -5,28 +5,7 @@ import { tokens } from '../../../config/tokens';
 export interface GlassSummaryContent {
   title: string;
   keyPoints: Array<{ text: string }>;
-  backgroundImage: { description?: string };
-}
-
-function ImagePlaceholder({ description }: { description?: string }) {
-  return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        minHeight: 200,
-        backgroundColor: '#E2E8F0',
-        borderRadius: 8,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#94A3B8',
-        fontSize: 18,
-      }}
-    >
-      {description || 'Image'}
-    </div>
-  );
+  backgroundImage: { description?: string; imageUrl?: string };
 }
 
 export function GlassSummarySlide({ content }: SlideProps<GlassSummaryContent>) {
@@ -43,7 +22,35 @@ export function GlassSummarySlide({ content }: SlideProps<GlassSummaryContent>) 
     >
       {/* Background image */}
       <div style={{ position: 'absolute', inset: 0 }}>
-        <ImagePlaceholder description={backgroundImage.description} />
+        {backgroundImage.imageUrl ? (
+          <img
+            src={backgroundImage.imageUrl}
+            alt={backgroundImage.description ?? ''}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              borderRadius: tokens.radius.md,
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: '100%',
+              height: '100%',
+              minHeight: 200,
+              backgroundColor: '#E2E8F0',
+              borderRadius: 8,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#94A3B8',
+              fontSize: 18,
+            }}
+          >
+            {backgroundImage.description || 'Image'}
+          </div>
+        )}
       </div>
 
       {/* Slight overlay for contrast */}

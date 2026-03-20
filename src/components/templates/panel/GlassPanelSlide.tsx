@@ -5,7 +5,7 @@ import { Text, Flex, Spacer } from '../../primitives';
 export interface GlassPanelContent {
   title: string;
   body: string;
-  backgroundImage: { description?: string };
+  backgroundImage: { description?: string; imageUrl?: string };
 }
 
 export function GlassPanelSlide({ content }: SlideProps<GlassPanelContent>) {
@@ -19,19 +19,34 @@ export function GlassPanelSlide({ content }: SlideProps<GlassPanelContent>) {
       }}
     >
       {/* Background image placeholder */}
-      <div
-        style={{
-          position: 'absolute',
-          inset: 0,
-          backgroundColor: '#E2E8F0',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: '#94A3B8',
-        }}
-      >
-        {content.backgroundImage.description ?? 'Image'}
-      </div>
+      {content.backgroundImage.imageUrl ? (
+        <img
+          src={content.backgroundImage.imageUrl}
+          alt={content.backgroundImage.description ?? ''}
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            borderRadius: tokens.radius.md,
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundColor: '#E2E8F0',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#94A3B8',
+          }}
+        >
+          {content.backgroundImage.description ?? 'Image'}
+        </div>
+      )}
 
       {/* Glass panel overlay */}
       <Flex

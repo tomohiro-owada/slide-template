@@ -4,7 +4,7 @@ import { Text, Flex, Spacer } from '../../primitives';
 
 export interface BasicPanelContent {
   title: string;
-  image: { description?: string };
+  image: { description?: string; imageUrl?: string };
   body: string;
   footer?: string;
 }
@@ -36,19 +36,32 @@ export function BasicPanelSlide({ content }: SlideProps<BasicPanelContent>) {
         }}
       >
         {/* Image header */}
-        <div
-          style={{
-            width: '100%',
-            height: 200,
-            backgroundColor: '#E2E8F0',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#94A3B8',
-          }}
-        >
-          {content.image.description ?? 'Image'}
-        </div>
+        {content.image.imageUrl ? (
+          <img
+            src={content.image.imageUrl}
+            alt={content.image.description ?? ''}
+            style={{
+              width: '100%',
+              height: 200,
+              objectFit: 'cover',
+              borderRadius: tokens.radius.md,
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: '100%',
+              height: 200,
+              backgroundColor: '#E2E8F0',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#94A3B8',
+            }}
+          >
+            {content.image.description ?? 'Image'}
+          </div>
+        )}
 
         {/* Content area */}
         <Flex

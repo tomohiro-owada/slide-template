@@ -23,15 +23,65 @@ https://github.com/tomohiro-owada/slide-template
 
 6つの Claude Code Skills がパイプラインとして繋がっています。
 
-```
-/slide-planner → /slide-generator → /chart-designer
-                                          ↓
-                              /validate-deck → /generate-image-prompts → /export-pdf
-```
+1. **`/slide-planner`** — 情報整理、対話で構成設計、slide-plan.md 出力
+2. **`/slide-generator`** — 構成案から deck.json を生成
+3. **`/chart-designer`** — データと主張からチャート設定を生成
+4. **`/validate-deck`** — Playwrightスクショ撮影＋スキーマ検証
+5. **`/generate-image-prompts`** — 画像生成AI用のプロンプトMDを1画像1ファイルで出力
+6. **`/export-pdf`** — Playwrightスクショ → PDF / PNG 出力
 
-`/slide-planner` と呼ぶだけで起動し、各Skillの出力が次のSkillの入力になるようフォーマットを統一してあります。
+各Skillの出力が次のSkillの入力になるようフォーマットを統一してあり、`/slide-planner` と呼ぶだけで起動します。
 
-ただし**全部自動では走らせません**。各ステップで人間が確認・承認するポイントを設けています。AI任せにしすぎると品質が崩壊するので、ここは意図的に人間をループに入れています。
+ただし**全部自動では走らせません**。
+
+## 46種類のレイアウト
+
+![Layout 01](https://github.com/user-attachments/assets/9e8f719f-9a76-45f7-a79b-6fcc11fc89ed)
+![Layout 02](https://github.com/user-attachments/assets/59035537-0d38-42e0-b381-951c9b0e814d)
+![Layout 03](https://github.com/user-attachments/assets/7c09f997-fe97-46e3-85a1-6d96b6189ecc)
+![Layout 04](https://github.com/user-attachments/assets/426cd3a4-8051-4d09-8d9d-a26b4b1d0a69)
+![Layout 05](https://github.com/user-attachments/assets/d93e0d4c-709d-48aa-9987-44fd76d96227)
+![Layout 06](https://github.com/user-attachments/assets/fbae6ac7-7fab-4d88-a009-68a018fe2ea2)
+![Layout 07](https://github.com/user-attachments/assets/99a14bcb-38c2-481c-a654-9daf507955dc)
+![Layout 08](https://github.com/user-attachments/assets/26d01f90-f33a-4f92-96f6-0db99526cb1b)
+![Layout 09](https://github.com/user-attachments/assets/1ea9338e-a2e3-4725-803b-c39a2b9eed3c)
+![Layout 10](https://github.com/user-attachments/assets/1d52d971-c90d-43e9-83d2-afbaa359d3f6)
+![Layout 11](https://github.com/user-attachments/assets/5989ca1b-7e13-482e-8363-cf16b4190d75)
+![Layout 12](https://github.com/user-attachments/assets/cfc85f3e-3f5b-42ee-acc5-31775776ff3e)
+![Layout 13](https://github.com/user-attachments/assets/bd9c46dd-474f-421b-a35e-afd67a58d948)
+![Layout 14](https://github.com/user-attachments/assets/e3000b7e-ed67-47a1-899b-3c948a2205e3)
+![Layout 15](https://github.com/user-attachments/assets/c506ef9c-0b40-4100-830d-98701d3b327c)
+![Layout 16](https://github.com/user-attachments/assets/d4256e2a-8e06-4bc1-8946-b18f1b631317)
+![Layout 17](https://github.com/user-attachments/assets/f027e85a-f749-4b93-b658-b68ea2888130)
+![Layout 18](https://github.com/user-attachments/assets/428a01cc-b8f7-4ee1-a5b5-9d5dfd3e5562)
+![Layout 19](https://github.com/user-attachments/assets/75131514-b934-499c-b43a-ba2658b193ab)
+![Layout 20](https://github.com/user-attachments/assets/68ca449c-d311-4c95-a1b1-5c99a638c7dc)
+![Layout 21](https://github.com/user-attachments/assets/9c2c8bcb-aeeb-45da-a418-68e817ff9da4)
+![Layout 22](https://github.com/user-attachments/assets/7ce57596-cabf-4445-b050-b1336b9607f1)
+![Layout 23](https://github.com/user-attachments/assets/6237f986-a172-4caf-a10a-7310e7f85b0b)
+![Layout 24](https://github.com/user-attachments/assets/6adc41fd-f116-48e3-9681-66711d00e7b3)
+![Layout 25](https://github.com/user-attachments/assets/f5e2cb8a-9d57-42e4-86ef-4e84cde77e32)
+![Layout 26](https://github.com/user-attachments/assets/4854aa63-04bc-44fb-85a8-5243305dbde2)
+![Layout 27](https://github.com/user-attachments/assets/d0c09af4-8b7c-4ea9-9a8b-32cdebdefab3)
+![Layout 28](https://github.com/user-attachments/assets/6568b4bd-8de8-4d7a-aa73-e841fd57ad56)
+![Layout 29](https://github.com/user-attachments/assets/4982f420-5449-4d92-b56f-d49da06048d1)
+![Layout 30](https://github.com/user-attachments/assets/274df891-f46a-4ff0-b924-1bf4fc175949)
+![Layout 31](https://github.com/user-attachments/assets/5d63ca20-87d1-4edb-8571-0d32cf1c8a34)
+![Layout 32](https://github.com/user-attachments/assets/d6ac0a03-37fc-4612-afb3-32279caed601)
+![Layout 33](https://github.com/user-attachments/assets/0b90b1af-c257-475e-ad9c-88e3f7842505)
+![Layout 34](https://github.com/user-attachments/assets/e893859c-2516-420a-a84b-8b3f0dbba59c)
+![Layout 35](https://github.com/user-attachments/assets/4e233064-4dc6-482e-baad-6a7b6614a63a)
+![Layout 36](https://github.com/user-attachments/assets/d0d3a1b0-2ca2-4039-9647-814b3a259dcc)
+![Layout 37](https://github.com/user-attachments/assets/362a15d6-7a42-459b-8354-96594e42f380)
+![Layout 38](https://github.com/user-attachments/assets/d81f59f0-e670-441b-93ac-dfbc714e37b2)
+![Layout 39](https://github.com/user-attachments/assets/017a70ae-9ece-4332-9f87-fa97adb2af70)
+![Layout 40](https://github.com/user-attachments/assets/b76855e4-f061-48ff-b84b-d40d06ebb813)
+![Layout 41](https://github.com/user-attachments/assets/6d3febf8-ab3a-4955-adf0-e6750476a752)
+![Layout 42](https://github.com/user-attachments/assets/39926992-dcde-4a86-a3f6-71edd8fd2a04)
+![Layout 43](https://github.com/user-attachments/assets/a10543ab-90a5-4e2f-9b25-eb18b9a7fe6d)
+![Layout 44](https://github.com/user-attachments/assets/2d2e7032-3016-4ff4-80b5-f3b8b6587ea1)
+![Layout 45](https://github.com/user-attachments/assets/38d8b88a-675c-44fa-bc17-551b6ca206ab)
+![Layout 46](https://github.com/user-attachments/assets/4e130bf2-bdd8-4249-a404-2460ecb1fccc)各ステップで人間が確認・承認するポイントを設けています。AI任せにしすぎると品質が崩壊するので、ここは意図的に人間をループに入れています。
 
 ## テンプレートは「配置だけ」、見た目は持たない
 

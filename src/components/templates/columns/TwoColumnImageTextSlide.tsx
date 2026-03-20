@@ -5,7 +5,7 @@ import type { SlideProps } from '../../../types/slide';
 export interface TwoColumnImageTextContent {
   title: string;
   body: string;
-  image: { description?: string };
+  image: { description?: string; imageUrl?: string };
 }
 
 export function TwoColumnImageTextSlide({ content }: SlideProps<TwoColumnImageTextContent>) {
@@ -16,20 +16,34 @@ export function TwoColumnImageTextSlide({ content }: SlideProps<TwoColumnImageTe
       <Flex direction="row" gap="xl" align="stretch" style={{ flex: 1 }}>
         {/* Image column */}
         <Flex flex={1} style={{ minHeight: 0 }}>
-          <div style={{
-            width: '100%',
-            height: '100%',
-            minHeight: 200,
-            backgroundColor: tokens.layout.panel.border,
-            borderRadius: tokens.radius.md,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: tokens.layout.text.muted,
-            fontSize: tokens.size.caption,
-          }}>
-            {content.image.description || 'Image'}
-          </div>
+          {content.image.imageUrl ? (
+            <img
+              src={content.image.imageUrl}
+              alt={content.image.description ?? ''}
+              style={{
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                borderRadius: tokens.radius.md,
+                minHeight: 200,
+              }}
+            />
+          ) : (
+            <div style={{
+              width: '100%',
+              height: '100%',
+              minHeight: 200,
+              backgroundColor: tokens.layout.panel.border,
+              borderRadius: tokens.radius.md,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: tokens.layout.text.muted,
+              fontSize: tokens.size.caption,
+            }}>
+              {content.image.description || 'Image'}
+            </div>
+          )}
         </Flex>
 
         {/* Text column */}

@@ -5,28 +5,7 @@ import { tokens } from '../../../config/tokens';
 export interface SplitBackgroundContent {
   title: string;
   body?: string;
-  images: Array<{ image: { description?: string } }>;
-}
-
-function ImagePlaceholder({ description }: { description?: string }) {
-  return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        minHeight: 200,
-        backgroundColor: '#E2E8F0',
-        borderRadius: 8,
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-        color: '#94A3B8',
-        fontSize: 18,
-      }}
-    >
-      {description || 'Image'}
-    </div>
-  );
+  images: Array<{ image: { description?: string; imageUrl?: string } }>;
 }
 
 export function SplitBackgroundSlide({ content }: SlideProps<SplitBackgroundContent>) {
@@ -51,7 +30,35 @@ export function SplitBackgroundSlide({ content }: SlideProps<SplitBackgroundCont
       >
         {images.map((img, i) => (
           <div key={i} style={{ flex: 1, position: 'relative' }}>
-            <ImagePlaceholder description={img.image.description} />
+            {img.image.imageUrl ? (
+              <img
+                src={img.image.imageUrl}
+                alt={img.image.description ?? ''}
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: tokens.radius.md,
+                }}
+              />
+            ) : (
+              <div
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  minHeight: 200,
+                  backgroundColor: '#E2E8F0',
+                  borderRadius: 8,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  color: '#94A3B8',
+                  fontSize: 18,
+                }}
+              >
+                {img.image.description || 'Image'}
+              </div>
+            )}
           </div>
         ))}
       </div>

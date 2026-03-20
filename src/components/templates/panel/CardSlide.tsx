@@ -4,7 +4,7 @@ import { Text, Flex, Spacer } from '../../primitives';
 
 export interface CardContent {
   title: string;
-  image: { description?: string };
+  image: { description?: string; imageUrl?: string };
   body: string;
   tags?: Array<{ text: string }>;
 }
@@ -35,20 +35,33 @@ export function CardSlide({ content }: SlideProps<CardContent>) {
         }}
       >
         {/* Card image */}
-        <div
-          style={{
-            width: '100%',
-            height: 200,
-            backgroundColor: '#E2E8F0',
-            borderRadius: 8,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#94A3B8',
-          }}
-        >
-          {content.image.description ?? 'Image'}
-        </div>
+        {content.image.imageUrl ? (
+          <img
+            src={content.image.imageUrl}
+            alt={content.image.description ?? ''}
+            style={{
+              width: '100%',
+              height: 200,
+              objectFit: 'cover',
+              borderRadius: tokens.radius.md,
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: '100%',
+              height: 200,
+              backgroundColor: '#E2E8F0',
+              borderRadius: 8,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              color: '#94A3B8',
+            }}
+          >
+            {content.image.description ?? 'Image'}
+          </div>
+        )}
 
         {/* Card content */}
         <Flex
